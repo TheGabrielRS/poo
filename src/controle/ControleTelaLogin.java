@@ -27,29 +27,26 @@ public class ControleTelaLogin implements ActionListener{
     }  
     
     private void adicionaActionListeners(){
-        JButton jbValidar = this.getTl().getJbValidar();
-        jbValidar.addActionListener(new java.awt.event.ActionListener(){
+        
+        this.getTl().getJbValidar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 validarCampos();
             }
         });
 
-        JButton jbLimpar = this.getTl().getJbLimpar();
-        jbLimpar.addActionListener(new java.awt.event.ActionListener(){
+        this.getTl().getJbLimpar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limparCampos();
             }
         });
         
-        JButton jbCriarProntuario = this.getTp().getJbCriarProntuario();
-        jbCriarProntuario.addActionListener(new java.awt.event.ActionListener(){
+        this.getTp().getJbCriarProntuario().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criarProntuario();
             }
         });
         
-        JButton jbConsultarProntuario = this.getTp().getJbConsultar();
-        jbCriarProntuario.addActionListener(new java.awt.event.ActionListener(){
+        this.getTp().getJbConsultar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 //criarProntuario();
             }
