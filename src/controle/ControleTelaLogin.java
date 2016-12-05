@@ -18,16 +18,10 @@ public class ControleTelaLogin implements ActionListener{
     public ControleTelaLogin(){
         tl = new TelaLogin();
         tp = new TelaPrincipal();
+        this.adicionaActionListeners();
     }
     
-    public static void main(String args[]){
-        ControleTelaLogin ctl = new ControleTelaLogin();
-        ctl.adicionaActionListeners();
-        ctl.getTl().setVisible(true);
-    }  
-    
     private void adicionaActionListeners(){
-        
         this.getTl().getJbValidar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 validarCampos();

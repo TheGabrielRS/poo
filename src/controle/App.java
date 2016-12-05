@@ -9,9 +9,9 @@ package controle;
  *
  * @author marcosvlp
  */
-public class ControleCadastroFicha {
-    
-    public ControleCadastroFicha(){
-        
+public class App {
+    public static void main(String args[]){
+        ControleTelaLogin ctl = new ControleTelaLogin();
+        ctl.getTl().setVisible(true);
     }
 }
