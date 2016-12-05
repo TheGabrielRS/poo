@@ -64,7 +64,7 @@ public class ControleTelaLogin implements ActionListener{
     
     private void criarProntuario(){
         tp.dispose();
-       // ControleCadastroFicha ccd = new ControleCadastroFicha();
+        ControleCadastroFicha ccd = new ControleCadastroFicha();
     }
     
     public TelaLogin getTl() {
