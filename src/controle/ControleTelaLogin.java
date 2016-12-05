@@ -7,6 +7,7 @@ package controle;
 
 import visao.TelaPrincipal;
 import visao.TelaLogin;
+import modelo.Usuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -22,25 +23,25 @@ public class ControleTelaLogin implements ActionListener{
     }
     
     private void adicionaActionListeners(){
-        this.getTl().getJbValidar().addActionListener(new java.awt.event.ActionListener(){
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                validarCampos();
+        this.tl.getJbValidar().addActionListener(new java.awt.event.ActionListener(){
+            public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                validarCampos();                     
             }
         });
 
-        this.getTl().getJbLimpar().addActionListener(new java.awt.event.ActionListener(){
+        this.tl.getJbLimpar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limparCampos();
             }
         });
         
-        this.getTp().getJbCriarProntuario().addActionListener(new java.awt.event.ActionListener(){
+        this.tp.getJbCriarProntuario().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criarProntuario();
             }
         });
         
-        this.getTp().getJbConsultar().addActionListener(new java.awt.event.ActionListener(){
+        this.tp.getJbConsultar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 //criarProntuario();
             }
@@ -48,18 +49,19 @@ public class ControleTelaLogin implements ActionListener{
     }
 
     private void validarCampos(){
-        //Pegar do csv
+        Usuario usuario = new Usuario(tl.getJtfUsuario().getText(), tl.getJpfSenha().getPassword());
         
-        if(true){
+        
+        if(usuario.validaLogin()){
             //Mostra tela principal e destroi tela de login
-            tp.setVisible(true);
-            tl.dispose();
+            this.tp.setVisible(true);
+            this.tl.dispose();
         }
     }
     
     private void limparCampos(){
-        this.getTl().getJtfUsuario().setText("");
-        this.getTl().getJpfSenha().setText("");
+        tl.getJtfUsuario().setText("");
+        tl.getJpfSenha().setText("");
     }
     
     private void criarProntuario(){
