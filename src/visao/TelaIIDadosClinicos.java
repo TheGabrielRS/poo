@@ -1,9 +1,13 @@
 package visao;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class TelaIIDadosClinicos extends javax.swing.JFrame {
@@ -77,7 +81,6 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
         jtaAtitudes.setRows(2);
         jtaAtitudes.setTabSize(2);
         jScrollPane3.setViewportView(jtaAtitudes);
-        jtaAtitudes.getAccessibleContext().setAccessibleParent(null);
 
         jlAtitudes.setText("Quando decide emagrecer, que atitudes toma?");
 
@@ -323,9 +326,9 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(js3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbProximo)
-                    .addComponent(jbAnterior))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbAnterior)
+                    .addComponent(jbProximo))
                 .addContainerGap())
         );
 
@@ -398,6 +401,174 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
 
     public void setJbTituloSecao(JLabel jbTituloSecao) {
         this.jbTituloSecao = jbTituloSecao;
+    }
+
+    public ButtonGroup getBgApetite() {
+        return bgApetite;
+    }
+
+    public void setBgApetite(ButtonGroup bgApetite) {
+        this.bgApetite = bgApetite;
+    }
+
+    public ButtonGroup getBgConsistenciaAlimentacao() {
+        return bgConsistenciaAlimentacao;
+    }
+
+    public void setBgConsistenciaAlimentacao(ButtonGroup bgConsistenciaAlimentacao) {
+        this.bgConsistenciaAlimentacao = bgConsistenciaAlimentacao;
+    }
+
+    public JCheckBox getJcbConstipacao() {
+        return jcbConstipacao;
+    }
+
+    public void setJcbConstipacao(JCheckBox jcbConstipacao) {
+        this.jcbConstipacao = jcbConstipacao;
+    }
+
+    public JCheckBox getJcbDiarreia() {
+        return jcbDiarreia;
+    }
+
+    public void setJcbDiarreia(JCheckBox jcbDiarreia) {
+        this.jcbDiarreia = jcbDiarreia;
+    }
+
+    public JCheckBox getJcbDiasfagia() {
+        return jcbDiasfagia;
+    }
+
+    public void setJcbDiasfagia(JCheckBox jcbDiasfagia) {
+        this.jcbDiasfagia = jcbDiasfagia;
+    }
+
+    public JCheckBox getJcbMastigacao() {
+        return jcbMastigacao;
+    }
+
+    public void setJcbMastigacao(JCheckBox jcbMastigacao) {
+        this.jcbMastigacao = jcbMastigacao;
+    }
+
+    public JCheckBox getJcbNausea() {
+        return jcbNausea;
+    }
+
+    public void setJcbNausea(JCheckBox jcbNausea) {
+        this.jcbNausea = jcbNausea;
+    }
+
+    public JCheckBox getJcbPirose() {
+        return jcbPirose;
+    }
+
+    public void setJcbPirose(JCheckBox jcbPirose) {
+        this.jcbPirose = jcbPirose;
+    }
+
+    public JCheckBox getJcbVomitos() {
+        return jcbVomitos;
+    }
+
+    public void setJcbVomitos(JCheckBox jcbVomitos) {
+        this.jcbVomitos = jcbVomitos;
+    }
+
+    public JTextArea getJtaAtitudes() {
+        return jtaAtitudes;
+    }
+
+    public void setJtaAtitudes(JTextArea jtaAtitudes) {
+        this.jtaAtitudes = jtaAtitudes;
+    }
+
+    public JTextArea getJtaHistoria() {
+        return jtaHistoria;
+    }
+
+    public void setJtaHistoria(JTextArea jtaHistoria) {
+        this.jtaHistoria = jtaHistoria;
+    }
+
+    public JTextArea getJtaHistorico() {
+        return jtaHistorico;
+    }
+
+    public void setJtaHistorico(JTextArea jtaHistorico) {
+        this.jtaHistorico = jtaHistorico;
+    }
+
+    public JTextArea getJtaInterferencias() {
+        return jtaInterferencias;
+    }
+
+    public void setJtaInterferencias(JTextArea jtaInterferencias) {
+        this.jtaInterferencias = jtaInterferencias;
+    }
+
+    public JTextField getJtfMudancas() {
+        return jtfMudancas;
+    }
+
+    public void setJtfMudancas(JTextField jtfMudancas) {
+        this.jtfMudancas = jtfMudancas;
+    }
+
+    public JTextField getJtfObs() {
+        return jtfObs;
+    }
+
+    public void setJtfObs(JTextField jtfObs) {
+        this.jtfObs = jtfObs;
+    }
+
+    public JTextField getJtfPorque() {
+        return jtfPorque;
+    }
+
+    public void setJtfPorque(JTextField jtfPorque) {
+        this.jtfPorque = jtfPorque;
+    }
+
+    public JRadioButton getJrbAbaixoNormal() {
+        return jrbAbaixoNormal;
+    }
+
+    public void setJrbAbaixoNormal(JRadioButton jrbAbaixoNormal) {
+        this.jrbAbaixoNormal = jrbAbaixoNormal;
+    }
+
+    public JRadioButton getJrbAcimaNormal() {
+        return jrbAcimaNormal;
+    }
+
+    public void setJrbAcimaNormal(JRadioButton jrbAcimaNormal) {
+        this.jrbAcimaNormal = jrbAcimaNormal;
+    }
+
+    public JRadioButton getJrbNao() {
+        return jrbNao;
+    }
+
+    public void setJrbNao(JRadioButton jrbNao) {
+        this.jrbNao = jrbNao;
+    }
+
+    public JRadioButton getJrbNormal() {
+        return jrbNormal;
+    }
+
+    public void setJrbNormal(JRadioButton jrbNormal) {
+        this.jrbNormal = jrbNormal;
+    }
+
+    public JRadioButton getJrbSim() {
+        return jrbSim;
+    }
+
+    public void setJrbSim(JRadioButton jrbSim) {
+        this.jrbSim = jrbSim;
     }
 
    

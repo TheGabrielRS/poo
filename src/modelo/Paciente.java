@@ -15,7 +15,7 @@ public class Paciente {
     private String cpf; //TODO valida CPF
     private String nome;
     private char sexo;
-    private LocalDate dataNasc; //TODO método para calcular idade
+    private String dataNasc; //TODO método para calcular idade
     private String naturalidade;
     private String profissao;
     private String trabalho;
@@ -40,6 +40,36 @@ public class Paciente {
     private GastoEnergetico     gastoEnergetico;
     private CondutaNutricional  condutaNutricional;
 
+    public Paciente(String cpf, String nome, char sexo, String dataNasc, String naturalidade, String profissao, String trabalho, String turnoTrabalho, float peso, float altura, float bia, float imc, float pu, float pp, float cb, float dcs, float dct, Alimentacao alimentacao, AtividadeFísica atividadeFísica, DadosBioquimicos dadosBioquimicos, DadosClinicos dadosClinicos, Habitos habitos, Diagnostico diagnostico, GastoEnergetico gastoEnergetico, CondutaNutricional condutaNutricional) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.sexo = sexo;
+        this.dataNasc = dataNasc;
+        this.naturalidade = naturalidade;
+        this.profissao = profissao;
+        this.trabalho = trabalho;
+        this.turnoTrabalho = turnoTrabalho;
+        this.peso = peso;
+        this.altura = altura;
+        this.bia = bia;
+        this.imc = imc;
+        this.pu = pu;
+        this.pp = pp;
+        this.cb = cb;
+        this.dcs = dcs;
+        this.dct = dct;
+        this.alimentacao = alimentacao;
+        this.atividadeFísica = atividadeFísica;
+        this.dadosBioquimicos = dadosBioquimicos;
+        this.dadosClinicos = dadosClinicos;
+        this.habitos = habitos;
+        this.diagnostico = diagnostico;
+        this.gastoEnergetico = gastoEnergetico;
+        this.condutaNutricional = condutaNutricional;
+    }
+
+    
+    
     public String getNome() {
         return nome;
     }
@@ -56,11 +86,11 @@ public class Paciente {
         this.sexo = sexo;
     }
 
-    public LocalDate getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(LocalDate dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 
