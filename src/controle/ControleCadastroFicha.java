@@ -228,6 +228,59 @@ public class ControleCadastroFicha implements ActionListener{
             apetite, 
             t2.getJtfPorque().getText()
         );
+        
+        //HABITOS ALIMENTARES E SOCIAIS
+        TelaIIIHabitosAlimentareseSociais t3 = (TelaIIIHabitosAlimentareseSociais) jc[2];
+        
+        boolean etilismo = false;
+        if(t3.getBgEtilismo().getSelection().equals(t3.getJrbSimEtilismo())){
+            etilismo = true;
+        }else if(t3.getBgEtilismo().getSelection().equals(t3.getJrbNaoEtilismo())){
+            etilismo = false;
+        }
+        
+        boolean fumante = false;
+        if(t3.getBgFumante().getSelection().equals(t3.getJrbSimFumante())){
+            fumante = true;
+        }else if(t3.getBgFumante().getSelection().equals(t3.getJrbNaoFumante())){
+            fumante = false;
+        }
+        
+        boolean exFumante = false;
+        if(t3.getBgFumante().getSelection().equals(t3.getJrbExFumante()))
+            exFumante = true;
+        
+        Habitos habitos = new Habitos(
+            t3.getJtfAlergia().getText(), 
+            Integer.parseInt(t3.getJtfAgua().getText()), 
+            etilismo, 
+            t3.getJtfElitismo().getText(), 
+            fumante, 
+            exFumante, 
+            Integer.parseInt(t3.getJtfAnosCigarros().getText())
+        );
+        
+        //DIAGNOSTICO IMPRESSAO NUTRICIONAL
+        TelaVIIDiagnosticoImpressaoNutricional t7 = (TelaVIIDiagnosticoImpressaoNutricional) jc[3];
+        
+        Diagnostico diagnostico = new Diagnostico(
+            t7.getJtaDiagnostico().getText(), 
+            t7.getJcbVerduras().getSelectedItem().toString().charAt(0), 
+            t7.getJcbFrutas().getSelectedItem().toString().charAt(0), 
+            t7.getJcbRefrigerantes().getSelectedItem().toString().charAt(0),
+            t7.getJcbDoces().getSelectedItem().toString().charAt(0), 
+            t7.getJcbFrituras().getSelectedItem().toString().charAt(0) ,
+            t7.getJcbPaes().getSelectedItem().toString().charAt(0), 
+            t7.getJcbFastFood().getSelectedItem().toString().charAt(0)
+        );
+        
+        TelaVIIIGastoEnergetico t8 = (TelaVIIIGastoEnergetico) jc[4];
+        
+        GastoEnergetico gastoEnergetico = new GastoEnergetico (
+            Float.valueOf(t8.getJftfGEB().getText()),
+            Float.valueOf(t8.getJftfGET().getText())
+        );
+        
         /*Alimentacao alimentacao, 
         AtividadeFísica atividadeFísica, 
         DadosBioquimicos dadosBioquimicos, 
@@ -259,43 +312,16 @@ public class ControleCadastroFicha implements ActionListener{
             null, //TODO AtividadeFísica
             null, //TODO DadosBioquimicos
             dadosClinicos, 
-            null, //TODO Habitos
-            null, //TODO Diagnostico
-            null, //TODO GastoEnergetico
+            habitos, //TODO Habitos
+            diagnostico, 
+            gastoEnergetico, 
             null  //TODO CondutaNutricional
         );
         
         System.out.println(p.getNome());
         System.out.println(p.getDataNasc());
-        System.out.println(p.getTurnoTrabalho());
+        System.out.println(p.getDiagnostico().getFrituras());
             
-        /*Paciente p = new Paciente(
-            String cpf, 
-            String nome, 
-            char sexo, 
-            LocalDate dataNasc, 
-            String naturalidade, 
-            String profissao, 
-            String trabalho, 
-            String turnoTrabalho, 
-            float peso, 
-            float altura,
-            float bia, 
-            float imc,
-            float pu, 
-            float pp, 
-            float cb, 
-            float dcs, 
-            float dct, 
-            Alimentacao alimentacao, 
-            AtividadeFísica atividadeFísica, 
-            DadosBioquimicos dadosBioquimicos, 
-            DadosClinicos dadosClinicos, 
-            Habitos habitos, 
-            Diagnostico diagnostico, 
-            GastoEnergetico gastoEnergetico, 
-            CondutaNutricional condutaNutricional
-        );*/
     }
 
 

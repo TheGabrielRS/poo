@@ -197,5 +197,63 @@ public class Paciente {
     public void setDct(float dct) {
         this.dct = dct;
     }
+
+    public Alimentacao getAlimentacao() {
+        return alimentacao;
+    }
+
+    public void setAlimentacao(Alimentacao alimentacao) {
+        this.alimentacao = alimentacao;
+    }
+
+    public AtividadeFísica getAtividadeFísica() {
+        return atividadeFísica;
+    }
+
+    public void setAtividadeFísica(AtividadeFísica atividadeFísica) {
+        this.atividadeFísica = atividadeFísica;
+    }
+
+    public DadosClinicos getDadosClinicos() {
+        return dadosClinicos;
+    }
+
+    public void setDadosClinicos(DadosClinicos dadosClinicos) {
+        this.dadosClinicos = dadosClinicos;
+    }
+
+    public Habitos getHabitos() {
+        return habitos;
+    }
+
+    public void setHabitos(Habitos habitos) {
+        this.habitos = habitos;
+    }
+
+    public Diagnostico getDiagnostico() {
+        return diagnostico;
+    }
+
+    public void setDiagnostico(Diagnostico diagnostico) {
+        this.diagnostico = diagnostico;
+    }
+
+    public GastoEnergetico getGastoEnergetico() {
+        return gastoEnergetico;
+    }
+
+    public void setGastoEnergetico(GastoEnergetico gastoEnergetico) {
+        this.gastoEnergetico = gastoEnergetico;
+    }
+
+    public CondutaNutricional getCondutaNutricional() {
+        return condutaNutricional;
+    }
+
+    public void setCondutaNutricional(CondutaNutricional condutaNutricional) {
+        this.condutaNutricional = condutaNutricional;
+    }
+    
+    
     
 }

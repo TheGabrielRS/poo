@@ -1,9 +1,11 @@
 package visao;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
@@ -26,7 +28,7 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
         jtfAlergia = new javax.swing.JTextField();
         jlAgua = new javax.swing.JLabel();
         jtfAgua = new javax.swing.JTextField();
-        jtfEtilismo = new javax.swing.JLabel();
+        jlElitismo = new javax.swing.JLabel();
         jrbSimEtilismo = new javax.swing.JRadioButton();
         jrbNaoEtilismo = new javax.swing.JRadioButton();
         jlFumante = new javax.swing.JLabel();
@@ -35,6 +37,8 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
         jrbExFumante = new javax.swing.JRadioButton();
         jlSono = new javax.swing.JLabel();
         jtfSono = new javax.swing.JTextField();
+        jtfElitismo = new javax.swing.JTextField();
+        jtfAnosCigarros = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,7 +53,7 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
 
         jlAgua.setText("Água: ");
 
-        jtfEtilismo.setText("Etilismo: ");
+        jlElitismo.setText("Etilismo: ");
 
         bgEtilismo.add(jrbSimEtilismo);
         jrbSimEtilismo.setText("Sim");
@@ -70,6 +74,8 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
 
         jlSono.setText("Sono: ");
 
+        jtfAnosCigarros.setText(" ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,7 +86,7 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 327, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jbAnterior)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbProximo))
@@ -89,26 +95,30 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jtfAlergia))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlAgua)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtfAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtfEtilismo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jrbSimEtilismo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jrbNaoEtilismo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jlFumante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jrbSimFumante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jrbNaoFumante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jrbExFumante))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jlAgua)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtfAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jlElitismo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrbSimEtilismo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrbNaoEtilismo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtfElitismo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jbTituloSecao)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jlFumante)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jrbSimFumante)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrbNaoFumante)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jrbExFumante)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtfAnosCigarros, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jlSono)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -131,18 +141,22 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAgua)
                     .addComponent(jtfAgua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfEtilismo)
+                    .addComponent(jlElitismo)
                     .addComponent(jrbSimEtilismo)
                     .addComponent(jrbNaoEtilismo)
+                    .addComponent(jtfElitismo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlFumante)
                     .addComponent(jrbSimFumante)
                     .addComponent(jrbNaoFumante)
-                    .addComponent(jrbExFumante))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jrbExFumante)
+                    .addComponent(jtfAnosCigarros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlSono)
                     .addComponent(jtfSono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -178,6 +192,102 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
         this.jbTituloSecao = jbTituloSecao;
     }
 
+    public ButtonGroup getBgEtilismo() {
+        return bgEtilismo;
+    }
+
+    public void setBgEtilismo(ButtonGroup bgEtilismo) {
+        this.bgEtilismo = bgEtilismo;
+    }
+
+    public ButtonGroup getBgFumante() {
+        return bgFumante;
+    }
+
+    public void setBgFumante(ButtonGroup bgFumante) {
+        this.bgFumante = bgFumante;
+    }
+
+    public JRadioButton getJrbExFumante() {
+        return jrbExFumante;
+    }
+
+    public void setJrbExFumante(JRadioButton jrbExFumante) {
+        this.jrbExFumante = jrbExFumante;
+    }
+
+    public JRadioButton getJrbNaoEtilismo() {
+        return jrbNaoEtilismo;
+    }
+
+    public void setJrbNaoEtilismo(JRadioButton jrbNaoEtilismo) {
+        this.jrbNaoEtilismo = jrbNaoEtilismo;
+    }
+
+    public JRadioButton getJrbNaoFumante() {
+        return jrbNaoFumante;
+    }
+
+    public void setJrbNaoFumante(JRadioButton jrbNaoFumante) {
+        this.jrbNaoFumante = jrbNaoFumante;
+    }
+
+    public JRadioButton getJrbSimEtilismo() {
+        return jrbSimEtilismo;
+    }
+
+    public void setJrbSimEtilismo(JRadioButton jrbSimEtilismo) {
+        this.jrbSimEtilismo = jrbSimEtilismo;
+    }
+
+    public JRadioButton getJrbSimFumante() {
+        return jrbSimFumante;
+    }
+
+    public void setJrbSimFumante(JRadioButton jrbSimFumante) {
+        this.jrbSimFumante = jrbSimFumante;
+    }
+
+    public JTextField getJtfAgua() {
+        return jtfAgua;
+    }
+
+    public void setJtfAgua(JTextField jtfAgua) {
+        this.jtfAgua = jtfAgua;
+    }
+
+    public JTextField getJtfAlergia() {
+        return jtfAlergia;
+    }
+
+    public void setJtfAlergia(JTextField jtfAlergia) {
+        this.jtfAlergia = jtfAlergia;
+    }
+
+    public JTextField getJtfSono() {
+        return jtfSono;
+    }
+
+    public void setJtfSono(JTextField jtfSono) {
+        this.jtfSono = jtfSono;
+    }
+
+    public JTextField getJtfElitismo() {
+        return jtfElitismo;
+    }
+
+    public void setJtfElitismo(JTextField jtfElitismo) {
+        this.jtfElitismo = jtfElitismo;
+    }
+
+    public JTextField getJtfAnosCigarros() {
+        return jtfAnosCigarros;
+    }
+
+    public void setJtfAnosCigarros(JTextField jtfAnosCigarros) {
+        this.jtfAnosCigarros = jtfAnosCigarros;
+    }
+
    
 
     
@@ -191,6 +301,7 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
     private javax.swing.JLabel jbTituloSecao;
     private javax.swing.JLabel jlAgua;
     private javax.swing.JLabel jlAlergia;
+    private javax.swing.JLabel jlElitismo;
     private javax.swing.JLabel jlFumante;
     private javax.swing.JLabel jlSono;
     private javax.swing.JRadioButton jrbExFumante;
@@ -201,7 +312,8 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
     private javax.swing.JSeparator js1;
     private javax.swing.JTextField jtfAgua;
     private javax.swing.JTextField jtfAlergia;
-    private javax.swing.JLabel jtfEtilismo;
+    private javax.swing.JTextField jtfAnosCigarros;
+    private javax.swing.JTextField jtfElitismo;
     private javax.swing.JTextField jtfSono;
     // End of variables declaration//GEN-END:variables
 }
