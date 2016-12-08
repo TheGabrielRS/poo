@@ -24,6 +24,8 @@ public class App {
     }
         
         ControleTelaLogin ctl = new ControleTelaLogin();
+        ctl.getTl().setLocationRelativeTo(null);
+        ctl.getTp().setLocationRelativeTo(null);
         ctl.getTl().setVisible(true);
     }
 }

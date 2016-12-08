@@ -19,183 +19,181 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
         bgApetite = new javax.swing.ButtonGroup();
         jbTituloSecao = new javax.swing.JLabel();
         js1 = new javax.swing.JSeparator();
-        jlNome = new javax.swing.JLabel();
+        jlHistoria = new javax.swing.JLabel();
         jbProximo = new javax.swing.JButton();
         jbAnterior = new javax.swing.JButton();
-        jSeparator3 = new javax.swing.JSeparator();
+        js3 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jlNome1 = new javax.swing.JLabel();
+        jtaHistoria = new javax.swing.JTextArea();
+        jlInterferencias = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jlNome2 = new javax.swing.JLabel();
-        jlNome3 = new javax.swing.JLabel();
+        jtaAtitudes = new javax.swing.JTextArea();
+        jlAtitudes = new javax.swing.JLabel();
+        jlHistorico = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        jtaHistorico = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
+        jtaInterferencias = new javax.swing.JTextArea();
+        jlAlteracoesGastro = new javax.swing.JLabel();
+        jcbMastigacao = new javax.swing.JCheckBox();
+        jcbDiasfagia = new javax.swing.JCheckBox();
+        jcbPirose = new javax.swing.JCheckBox();
+        jcbNausea = new javax.swing.JCheckBox();
+        jcbVomitos = new javax.swing.JCheckBox();
+        jcbDiarreia = new javax.swing.JCheckBox();
+        jcbConstipacao = new javax.swing.JCheckBox();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jTextField2 = new javax.swing.JTextField();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jLabel4 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jTextField3 = new javax.swing.JTextField();
+        jlObs = new javax.swing.JLabel();
+        jtfObs = new javax.swing.JTextField();
+        jlMudancasConsistencia = new javax.swing.JLabel();
+        jrbSim = new javax.swing.JRadioButton();
+        jrbNao = new javax.swing.JRadioButton();
+        jtfMudancas = new javax.swing.JTextField();
+        jrbAbaixoNormal = new javax.swing.JRadioButton();
+        jlApetite = new javax.swing.JLabel();
+        jrbNormal = new javax.swing.JRadioButton();
+        jrbAcimaNormal = new javax.swing.JRadioButton();
+        jtfPorque = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jbTituloSecao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jbTituloSecao.setText("II - Dados Clínicos");
 
-        jlNome.setText("História / QP / Diagnóstico Clínico: ");
+        jlHistoria.setText("História / QP / Diagnóstico Clínico: ");
 
         jbProximo.setText("Próximo");
 
         jbAnterior.setText("Anterior");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jtaHistoria.setColumns(20);
+        jtaHistoria.setRows(5);
+        jScrollPane1.setViewportView(jtaHistoria);
 
-        jlNome1.setText("O que interfere na sua alimentação? ");
+        jlInterferencias.setText("O que interfere na sua alimentação? ");
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setLineWrap(true);
-        jTextArea3.setRows(2);
-        jTextArea3.setTabSize(2);
-        jScrollPane3.setViewportView(jTextArea3);
-        jTextArea3.getAccessibleContext().setAccessibleParent(null);
+        jtaAtitudes.setColumns(20);
+        jtaAtitudes.setLineWrap(true);
+        jtaAtitudes.setRows(2);
+        jtaAtitudes.setTabSize(2);
+        jScrollPane3.setViewportView(jtaAtitudes);
+        jtaAtitudes.getAccessibleContext().setAccessibleParent(null);
 
-        jlNome2.setText("Quando decide emagrecer, que atitudes toma?");
+        jlAtitudes.setText("Quando decide emagrecer, que atitudes toma?");
 
-        jlNome3.setText("Patologias pregressas e familiares: ");
+        jlHistorico.setText("Patologias pregressas e familiares: ");
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setLineWrap(true);
-        jTextArea5.setRows(2);
-        jTextArea5.setTabSize(2);
-        jScrollPane5.setViewportView(jTextArea5);
+        jtaHistorico.setColumns(20);
+        jtaHistorico.setRows(5);
+        jScrollPane5.setViewportView(jtaHistorico);
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setLineWrap(true);
-        jTextArea6.setRows(2);
-        jTextArea6.setTabSize(2);
-        jScrollPane6.setViewportView(jTextArea6);
+        jtaInterferencias.setColumns(20);
+        jtaInterferencias.setLineWrap(true);
+        jtaInterferencias.setRows(2);
+        jtaInterferencias.setTabSize(2);
+        jScrollPane6.setViewportView(jtaInterferencias);
 
-        jLabel1.setText("Alterações gastrointestinais:");
+        jlAlteracoesGastro.setText("Alterações gastrointestinais:");
 
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox1.setText("Mastigação");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jcbMastigacao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbMastigacao.setText("Mastigação");
+        jcbMastigacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jcbMastigacaoActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox2.setText("Diasfagia");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        jcbDiasfagia.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbDiasfagia.setText("Diasfagia");
+        jcbDiasfagia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                jcbDiasfagiaActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox3.setText("Pirose");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        jcbPirose.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbPirose.setText("Pirose");
+        jcbPirose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                jcbPiroseActionPerformed(evt);
             }
         });
 
-        jCheckBox4.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox4.setText("Náusea");
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+        jcbNausea.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbNausea.setText("Náusea");
+        jcbNausea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
+                jcbNauseaActionPerformed(evt);
             }
         });
 
-        jCheckBox5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox5.setText("Vômitos");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        jcbVomitos.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbVomitos.setText("Vômitos");
+        jcbVomitos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                jcbVomitosActionPerformed(evt);
             }
         });
 
-        jCheckBox6.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox6.setText("Diarréia");
-        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+        jcbDiarreia.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbDiarreia.setText("Diarréia");
+        jcbDiarreia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox6ActionPerformed(evt);
+                jcbDiarreiaActionPerformed(evt);
             }
         });
 
-        jCheckBox7.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCheckBox7.setText("Constipação");
-        jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
+        jcbConstipacao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jcbConstipacao.setText("Constipação");
+        jcbConstipacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox7ActionPerformed(evt);
+                jcbConstipacaoActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Obs.:");
+        jlObs.setText("Obs.:");
 
-        jLabel3.setText("Mudanças da consistência da alimentação:");
+        jlMudancasConsistencia.setText("Mudanças da consistência da alimentação:");
 
-        bgConsistenciaAlimentacao.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jRadioButton1.setText("Sim");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        bgConsistenciaAlimentacao.add(jrbSim);
+        jrbSim.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbSim.setText("Sim");
+        jrbSim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jrbSimActionPerformed(evt);
             }
         });
 
-        bgConsistenciaAlimentacao.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jRadioButton2.setText("Não");
+        bgConsistenciaAlimentacao.add(jrbNao);
+        jrbNao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbNao.setText("Não");
 
-        bgApetite.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jRadioButton4.setText("Abaixo do normal");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        bgApetite.add(jrbAbaixoNormal);
+        jrbAbaixoNormal.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbAbaixoNormal.setText("Abaixo do normal");
+        jrbAbaixoNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                jrbAbaixoNormalActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Apetite / Consumo Alimentar");
+        jlApetite.setText("Apetite / Consumo Alimentar");
 
-        bgApetite.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jRadioButton5.setText("Normal");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        bgApetite.add(jrbNormal);
+        jrbNormal.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbNormal.setText("Normal");
+        jrbNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                jrbNormalActionPerformed(evt);
             }
         });
 
-        bgApetite.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jRadioButton6.setText("Acima do normal");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        bgApetite.add(jrbAcimaNormal);
+        jrbAcimaNormal.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbAcimaNormal.setText("Acima do normal");
+        jrbAcimaNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                jrbAcimaNormalActionPerformed(evt);
             }
         });
 
@@ -204,7 +202,7 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(js1)
-            .addComponent(jSeparator3)
+            .addComponent(js3)
             .addComponent(jSeparator1)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -220,53 +218,53 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jCheckBox1))
+                            .addComponent(jlObs)
+                            .addComponent(jcbMastigacao))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBox2)
+                                .addComponent(jcbDiasfagia)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox3)
+                                .addComponent(jcbPirose)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox4)
+                                .addComponent(jcbNausea)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox5)
+                                .addComponent(jcbVomitos)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox6)
+                                .addComponent(jcbDiarreia)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCheckBox7)
+                                .addComponent(jcbConstipacao)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
-                                .addComponent(jTextField1))))
+                                .addComponent(jtfObs))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(jlMudancasConsistencia)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton1)
+                        .addComponent(jrbSim)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(jrbNao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2))
+                        .addComponent(jtfMudancas))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jbTituloSecao)
-                            .addComponent(jlNome)
-                            .addComponent(jlNome1)
-                            .addComponent(jlNome2)
-                            .addComponent(jlNome3)
-                            .addComponent(jLabel1))
+                            .addComponent(jlHistoria)
+                            .addComponent(jlInterferencias)
+                            .addComponent(jlAtitudes)
+                            .addComponent(jlHistorico)
+                            .addComponent(jlAlteracoesGastro))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(jlApetite)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton4)
+                        .addComponent(jrbAbaixoNormal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton5)
+                        .addComponent(jrbNormal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton6)
+                        .addComponent(jrbAcimaNormal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3)))
+                        .addComponent(jtfPorque)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -277,53 +275,53 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(js1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlNome)
+                .addComponent(jlHistoria)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlNome1)
+                .addComponent(jlInterferencias)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlNome2)
+                .addComponent(jlAtitudes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlNome3)
+                .addComponent(jlHistorico)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(jlAlteracoesGastro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jCheckBox7))
+                    .addComponent(jcbMastigacao)
+                    .addComponent(jcbDiasfagia)
+                    .addComponent(jcbPirose)
+                    .addComponent(jcbNausea)
+                    .addComponent(jcbVomitos)
+                    .addComponent(jcbDiarreia)
+                    .addComponent(jcbConstipacao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlObs)
+                    .addComponent(jtfObs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlMudancasConsistencia)
+                    .addComponent(jrbSim)
+                    .addComponent(jrbNao)
+                    .addComponent(jtfMudancas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jlApetite)
+                    .addComponent(jrbAbaixoNormal)
+                    .addComponent(jrbNormal)
+                    .addComponent(jrbAcimaNormal)
+                    .addComponent(jtfPorque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(js3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbProximo)
@@ -334,49 +332,49 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void jcbMastigacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMastigacaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_jcbMastigacaoActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void jcbDiasfagiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiasfagiaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_jcbDiasfagiaActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void jcbPiroseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbPiroseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    }//GEN-LAST:event_jcbPiroseActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+    private void jcbNauseaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbNauseaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
+    }//GEN-LAST:event_jcbNauseaActionPerformed
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void jcbVomitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbVomitosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    }//GEN-LAST:event_jcbVomitosActionPerformed
 
-    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+    private void jcbDiarreiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiarreiaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox6ActionPerformed
+    }//GEN-LAST:event_jcbDiarreiaActionPerformed
 
-    private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
+    private void jcbConstipacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbConstipacaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox7ActionPerformed
+    }//GEN-LAST:event_jcbConstipacaoActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jrbSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbSimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jrbSimActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void jrbAbaixoNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAbaixoNormalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_jrbAbaixoNormalActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void jrbNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbNormalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_jrbNormalActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void jrbAcimaNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbAcimaNormalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_jrbAcimaNormalActionPerformed
 
     public JButton getJbAnterior() {
         return jbAnterior;
@@ -409,42 +407,42 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bgApetite;
     private javax.swing.ButtonGroup bgConsistenciaAlimentacao;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JButton jbAnterior;
     private javax.swing.JButton jbProximo;
     private javax.swing.JLabel jbTituloSecao;
-    private javax.swing.JLabel jlNome;
-    private javax.swing.JLabel jlNome1;
-    private javax.swing.JLabel jlNome2;
-    private javax.swing.JLabel jlNome3;
+    private javax.swing.JCheckBox jcbConstipacao;
+    private javax.swing.JCheckBox jcbDiarreia;
+    private javax.swing.JCheckBox jcbDiasfagia;
+    private javax.swing.JCheckBox jcbMastigacao;
+    private javax.swing.JCheckBox jcbNausea;
+    private javax.swing.JCheckBox jcbPirose;
+    private javax.swing.JCheckBox jcbVomitos;
+    private javax.swing.JLabel jlAlteracoesGastro;
+    private javax.swing.JLabel jlApetite;
+    private javax.swing.JLabel jlAtitudes;
+    private javax.swing.JLabel jlHistoria;
+    private javax.swing.JLabel jlHistorico;
+    private javax.swing.JLabel jlInterferencias;
+    private javax.swing.JLabel jlMudancasConsistencia;
+    private javax.swing.JLabel jlObs;
+    private javax.swing.JRadioButton jrbAbaixoNormal;
+    private javax.swing.JRadioButton jrbAcimaNormal;
+    private javax.swing.JRadioButton jrbNao;
+    private javax.swing.JRadioButton jrbNormal;
+    private javax.swing.JRadioButton jrbSim;
     private javax.swing.JSeparator js1;
+    private javax.swing.JSeparator js3;
+    private javax.swing.JTextArea jtaAtitudes;
+    private javax.swing.JTextArea jtaHistoria;
+    private javax.swing.JTextArea jtaHistorico;
+    private javax.swing.JTextArea jtaInterferencias;
+    private javax.swing.JTextField jtfMudancas;
+    private javax.swing.JTextField jtfObs;
+    private javax.swing.JTextField jtfPorque;
     // End of variables declaration//GEN-END:variables
 }

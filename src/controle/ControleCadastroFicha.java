@@ -15,7 +15,7 @@ import visao.*;
  * @author marcosvlp
  */
 public class ControleCadastroFicha implements ActionListener{
-    public static int NUM_TELAS = 2;
+    public static int NUM_TELAS = 3;
     private JFrame janelaMestre;
     private JFrame jc[];
     private int contTela = 0;
@@ -28,7 +28,7 @@ public class ControleCadastroFicha implements ActionListener{
         jc = new JFrame[NUM_TELAS];
         jc[0] = new TelaIDadosPessoais();
         jc[1] = new TelaIIDadosClinicos();
-        //jc[3] = new TelaIIIHabitosAlimentareseSociais();
+        jc[2] = new TelaIIIHabitosAlimentareseSociais();
         //jc[4] = new TelaIVDadosBioquimicos();
         //jc[5] = new TelaVAtividadeFisica();
         //jc[6] = new TelaVIAnamneseAlimentar();
@@ -43,6 +43,7 @@ public class ControleCadastroFicha implements ActionListener{
         
         //DEFINE O CONTENTPANE DA JANELA MESTRE COMO O CONTENTPANE DA PRIMEIRA TELA DE PREENCHIMENTO, E MOSTRA
         janelaMestre.setContentPane(jc[0].getContentPane());
+        janelaMestre.setLocationRelativeTo(null);
         janelaMestre.setVisible(true);
     }
     
@@ -76,7 +77,20 @@ public class ControleCadastroFicha implements ActionListener{
             }
         });
         
-        //TELA 3...
+        //TELA 3
+        
+        TelaIIIHabitosAlimentareseSociais tmp3 = (TelaIIIHabitosAlimentareseSociais) jc[2];
+        tmp3.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    avancaPagina();
+            }
+        });
+        
+        tmp3.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    retornaPagina();
+            }
+        });
     }
     
     private void avancaPagina(){
@@ -87,7 +101,7 @@ public class ControleCadastroFicha implements ActionListener{
             
             janelaMestre.setSize((int)jc[contTela].getSize().getWidth(), (int)jc[contTela].getSize().getHeight());
             janelaMestre.setContentPane(jc[contTela].getContentPane());
-            
+            janelaMestre.setLocationRelativeTo(null);
         }
     }
     
@@ -99,6 +113,7 @@ public class ControleCadastroFicha implements ActionListener{
             
             janelaMestre.setSize((int)jc[contTela].getSize().getWidth(), (int)jc[contTela].getSize().getHeight());
             janelaMestre.setContentPane(jc[contTela].getContentPane());
+            janelaMestre.setLocationRelativeTo(null);
             
         }
     }
