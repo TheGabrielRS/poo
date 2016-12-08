@@ -58,7 +58,7 @@ public class ControleTelaLogin implements ActionListener{
             this.tl.dispose();
         }else
         {
-            System.out.println("errou");
+            tl.getJlErro().setText("Usuário ou senha incorretos");
         }
     }
     

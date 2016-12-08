@@ -15,7 +15,7 @@ import visao.*;
  * @author marcosvlp
  */
 public class ControleCadastroFicha implements ActionListener{
-    public static int NUM_TELAS = 1;
+    public static int NUM_TELAS = 2;
     private JFrame janelaMestre;
     private JFrame jc[];
     private int contTela = 0;
@@ -27,8 +27,7 @@ public class ControleCadastroFicha implements ActionListener{
         //DEFINE O ARRAY COM AS TELAS DE PREENCHIMENTO
         jc = new JFrame[NUM_TELAS];
         jc[0] = new TelaIDadosPessoais();
-        //jc[1] = new TelaIDadosPessoais();
-        //jc[2] = new TelaIIDadosClinicos();
+        jc[1] = new TelaIIDadosClinicos();
         //jc[3] = new TelaIIIHabitosAlimentareseSociais();
         //jc[4] = new TelaIVDadosBioquimicos();
         //jc[5] = new TelaVAtividadeFisica();
@@ -52,19 +51,30 @@ public class ControleCadastroFicha implements ActionListener{
         TelaIDadosPessoais tmp1 = (TelaIDadosPessoais) jc[0];
         tmp1.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
-                    System.out.println("proxpag");          
-                    //avancaPagina();
+                    avancaPagina();
             }
         });
         
         tmp1.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
-                    System.out.println("antpag");   
-                    //retornaPagina();
+                    retornaPagina();
             }
         });
         
         //TELA 2
+        
+        TelaIIDadosClinicos tmp2 = (TelaIIDadosClinicos) jc[1];
+        tmp2.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    avancaPagina();
+            }
+        });
+        
+        tmp2.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    retornaPagina();
+            }
+        });
         
         //TELA 3...
     }
@@ -74,10 +84,10 @@ public class ControleCadastroFicha implements ActionListener{
             //nao mais telas
         }else{
             contTela ++;
-            /*
-            janelaMestre.setSize((int)jc[contTela].getSize().getWidth(), (int)jc[0].getSize().getHeight());
+            
+            janelaMestre.setSize((int)jc[contTela].getSize().getWidth(), (int)jc[contTela].getSize().getHeight());
             janelaMestre.setContentPane(jc[contTela].getContentPane());
-            */
+            
         }
     }
     
@@ -86,10 +96,10 @@ public class ControleCadastroFicha implements ActionListener{
             //nao mais telas
         }else{
             contTela --;
-            /*
-            janelaMestre.setSize((int)jc[contTela].getSize().getWidth(), (int)jc[0].getSize().getHeight());
+            
+            janelaMestre.setSize((int)jc[contTela].getSize().getWidth(), (int)jc[contTela].getSize().getHeight());
             janelaMestre.setContentPane(jc[contTela].getContentPane());
-            */
+            
         }
     }
 

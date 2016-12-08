@@ -6,6 +6,7 @@
 package visao;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -26,6 +27,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jtfUsuario = new javax.swing.JTextField();
         jlSenha = new javax.swing.JLabel();
         jpfSenha = new javax.swing.JPasswordField();
+        jlErro = new javax.swing.JLabel();
         jp2 = new javax.swing.JPanel();
         jbLimpar = new javax.swing.JButton();
         jbValidar = new javax.swing.JButton();
@@ -39,25 +41,30 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jlSenha.setText("Senha");
 
+        jlErro.setText("     ");
+
         javax.swing.GroupLayout jp1Layout = new javax.swing.GroupLayout(jp1);
         jp1.setLayout(jp1Layout);
         jp1Layout.setHorizontalGroup(
             jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp1Layout.createSequentialGroup()
+            .addGroup(jp1Layout.createSequentialGroup()
                 .addContainerGap(52, Short.MAX_VALUE)
-                .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jlSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jlUsuario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtfUsuario)
-                    .addComponent(jpfSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
+                .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlErro)
+                    .addGroup(jp1Layout.createSequentialGroup()
+                        .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jlSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlUsuario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtfUsuario)
+                            .addComponent(jpfSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
         jp1Layout.setVerticalGroup(
             jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp1Layout.createSequentialGroup()
-                .addContainerGap(99, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlUsuario)
                     .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -65,7 +72,9 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGroup(jp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlSenha)
                     .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(95, 95, 95))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlErro)
+                .addGap(75, 75, 75))
         );
 
         getContentPane().add(jp1);
@@ -133,12 +142,21 @@ public class TelaLogin extends javax.swing.JFrame {
     public void setJtfUsuario(JTextField jtfUsuario) {
         this.jtfUsuario = jtfUsuario;
     }
+
+    public JLabel getJlErro() {
+        return jlErro;
+    }
+
+    public void setJlErro(JLabel jlErro) {
+        this.jlErro = jlErro;
+    }
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jbLimpar;
     private javax.swing.JButton jbValidar;
+    private javax.swing.JLabel jlErro;
     private javax.swing.JLabel jlSenha;
     private javax.swing.JLabel jlUsuario;
     private javax.swing.JPanel jp1;
