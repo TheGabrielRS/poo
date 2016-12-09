@@ -10,7 +10,7 @@ import modelo.telas.Alimentacao;
 import modelo.telas.GastoEnergetico;
 import modelo.telas.DadosBioquimicos;
 import modelo.telas.CondutaNutricional;
-import modelo.telas.AtividadeFísica;
+import modelo.telas.AtividadesFisicas;
 import modelo.telas.Diagnostico;
 import java.time.LocalDate;
 /** 
@@ -40,7 +40,7 @@ public class Paciente {
     
     //Demais informações
     private Alimentacao         alimentacao;
-    private AtividadeFísica     atividadeFísica;
+    private AtividadesFisicas     atividadeFísica;
     private DadosBioquimicos    dadosBioquimicos;
     private DadosClinicos       dadosClinicos;
     private Habitos             habitos;
@@ -48,7 +48,7 @@ public class Paciente {
     private GastoEnergetico     gastoEnergetico;
     private CondutaNutricional  condutaNutricional;
 
-    public Paciente(String cpf, String nome, char sexo, String dataNasc, String naturalidade, String profissao, String trabalho, String turnoTrabalho, float peso, float altura, float bia, float imc, float pu, float pp, float cb, float dcs, float dct, Alimentacao alimentacao, AtividadeFísica atividadeFísica, DadosBioquimicos dadosBioquimicos, DadosClinicos dadosClinicos, Habitos habitos, Diagnostico diagnostico, GastoEnergetico gastoEnergetico, CondutaNutricional condutaNutricional) {
+    public Paciente(String cpf, String nome, char sexo, String dataNasc, String naturalidade, String profissao, String trabalho, String turnoTrabalho, float peso, float altura, float bia, float imc, float pu, float pp, float cb, float dcs, float dct, Alimentacao alimentacao, AtividadesFisicas atividadeFísica, DadosBioquimicos dadosBioquimicos, DadosClinicos dadosClinicos, Habitos habitos, Diagnostico diagnostico, GastoEnergetico gastoEnergetico, CondutaNutricional condutaNutricional) {
         this.cpf = cpf;
         this.nome = nome;
         this.sexo = sexo;
@@ -214,11 +214,11 @@ public class Paciente {
         this.alimentacao = alimentacao;
     }
 
-    public AtividadeFísica getAtividadeFísica() {
+    public AtividadesFisicas getAtividadeFísica() {
         return atividadeFísica;
     }
 
-    public void setAtividadeFísica(AtividadeFísica atividadeFísica) {
+    public void setAtividadeFísica(AtividadesFisicas atividadeFísica) {
         this.atividadeFísica = atividadeFísica;
     }
 
@@ -261,6 +261,15 @@ public class Paciente {
     public void setCondutaNutricional(CondutaNutricional condutaNutricional) {
         this.condutaNutricional = condutaNutricional;
     }
+
+    public DadosBioquimicos getDadosBioquimicos() {
+        return dadosBioquimicos;
+    }
+
+    public void setDadosBioquimicos(DadosBioquimicos dadosBioquimicos) {
+        this.dadosBioquimicos = dadosBioquimicos;
+    }
+    
     
     
     

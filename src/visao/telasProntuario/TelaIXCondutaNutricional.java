@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class TelaIXCondutaNutricional extends javax.swing.JFrame {
@@ -151,6 +152,30 @@ public class TelaIXCondutaNutricional extends javax.swing.JFrame {
 
     public void setJbFinalizar(JButton jbFinalizar) {
         this.jbFinalizar = jbFinalizar;
+    }
+
+    public JFormattedTextField getJftfVet() {
+        return jftfVet;
+    }
+
+    public void setJftfVet(JFormattedTextField jftfVet) {
+        this.jftfVet = jftfVet;
+    }
+
+    public JTextArea getJtaDescricao() {
+        return jtaDescricao;
+    }
+
+    public void setJtaDescricao(JTextArea jtaDescricao) {
+        this.jtaDescricao = jtaDescricao;
+    }
+
+    public JTextArea getJtaOrientacoes() {
+        return jtaOrientacoes;
+    }
+
+    public void setJtaOrientacoes(JTextArea jtaOrientacoes) {
+        this.jtaOrientacoes = jtaOrientacoes;
     }
 
    

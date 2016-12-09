@@ -5,18 +5,17 @@
  */
 package controle;
 
-import modelo.outros.Paciente;
-import modelo.telas.Habitos;
-import modelo.telas.DadosClinicos;
-import modelo.telas.GastoEnergetico;
-import modelo.telas.Diagnostico;
+import modelo.outros.*;
+import modelo.telas.*;
 import visao.telasProntuario.*;
+
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -114,6 +113,20 @@ public class ControleCadastroFicha implements ActionListener{
             }
         });
         
+        tmp4.getJbAdicionarLinha().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {  
+                    DefaultTableModel model = (DefaultTableModel)tmp4.getJtDados().getModel();
+                    model.addRow(new Object[]{"","",""});
+            }
+        });
+        
+        tmp4.getJbRemoverLinha().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    DefaultTableModel model = (DefaultTableModel)tmp4.getJtDados().getModel();
+                    model.removeRow(model.getRowCount()-1);
+            }
+        });
+        
         //TELA 5
         TelaVAtividadeFisica tmp5 = (TelaVAtividadeFisica) jc[4];
         tmp5.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
@@ -125,6 +138,20 @@ public class ControleCadastroFicha implements ActionListener{
         tmp5.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
                     retornaPagina();
+            }
+        });
+        
+        tmp5.getJbAdicionarLinha().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {  
+                    DefaultTableModel model = (DefaultTableModel)tmp5.getJtDados().getModel();
+                    model.addRow(new Object[]{"","","",""});
+            }
+        });
+        
+        tmp5.getJbRemoverLinha().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    DefaultTableModel model = (DefaultTableModel)tmp5.getJtDados().getModel();
+                    model.removeRow(model.getRowCount()-1);
             }
         });
         
@@ -310,7 +337,7 @@ public class ControleCadastroFicha implements ActionListener{
         );
         
         //DIAGNOSTICO IMPRESSAO NUTRICIONAL
-        TelaVIIDiagnosticoImpressaoNutricional t7 = (TelaVIIDiagnosticoImpressaoNutricional) jc[3];
+        TelaVIIDiagnosticoImpressaoNutricional t7 = (TelaVIIDiagnosticoImpressaoNutricional) jc[6];
         
         Diagnostico diagnostico = new Diagnostico(
             t7.getJtaDiagnostico().getText(), 
@@ -323,17 +350,55 @@ public class ControleCadastroFicha implements ActionListener{
             t7.getJcbFastFood().getSelectedItem().toString().charAt(0)
         );
         
-        TelaVIIIGastoEnergetico t8 = (TelaVIIIGastoEnergetico) jc[4];
+        TelaVIIIGastoEnergetico t8 = (TelaVIIIGastoEnergetico) jc[7];
         
         GastoEnergetico gastoEnergetico = new GastoEnergetico (
             Float.valueOf(t8.getJftfGEB().getText()),
             Float.valueOf(t8.getJftfGET().getText())
         );
         
-        /*Alimentacao alimentacao, 
-        AtividadeFísica atividadeFísica, 
-        DadosBioquimicos dadosBioquimicos, 
-        CondutaNutricional condutaNutricional*/
+        //Dados Bioquimicos
+        
+        ArrayList<DadoBioquimico> arrayDadosBioquimicos = new  ArrayList<DadoBioquimico>();
+        DefaultTableModel model = (DefaultTableModel)  ((TelaIVDadosBioquimicos) jc[3]).getJtDados().getModel();
+        for(int x = 0; x < model.getRowCount(); x++){
+            DadoBioquimico db = new DadoBioquimico();
+            db.setNome((String)model.getValueAt(x,0)); 
+            db.setValor((String)model.getValueAt(x,1)); 
+            db.setData((String)model.getValueAt(x,2)); 
+            arrayDadosBioquimicos.add(db);
+        }
+        
+        DadosBioquimicos dadosBioquimicos = new DadosBioquimicos(arrayDadosBioquimicos);
+                   
+        //Atividades Fisicas
+        
+        ArrayList<AtividadeFisica> arrayAtividadesFisicas = new  ArrayList<AtividadeFisica>();
+        model = (DefaultTableModel)  ((TelaIVDadosBioquimicos) jc[4]).getJtDados().getModel();
+        for(int x = 0; x < model.getRowCount(); x++){
+            AtividadeFisica af = new AtividadeFisica();
+            af.setTipo((String)model.getValueAt(x,0)); 
+            af.setHorario((String)model.getValueAt(x,1)); 
+            af.setFrequencia((String)model.getValueAt(x,2)); 
+            af.setTempo((String)model.getValueAt(x,3)); 
+            
+            arrayAtividadesFisicas.add(af);
+        }
+        
+        AtividadesFisicas atividadesFisicas = new AtividadesFisicas(arrayAtividadesFisicas);
+                   
+        //Conduta Nutricional
+        TelaIXCondutaNutricional t9 = (TelaIXCondutaNutricional) jc[8];
+        
+        CondutaNutricional condutaNutricional = new CondutaNutricional(
+            t9.getJtaDescricao().getText(),
+            Float.valueOf(t9.getJftfVet().getText()), 
+            t9.getJtaOrientacoes().getText()
+        );
+        
+        //Alimentacao
+        
+        
         
         Paciente p = new Paciente(
             cpf, 
@@ -354,18 +419,20 @@ public class ControleCadastroFicha implements ActionListener{
             dcs, 
             dct, 
             null, //TODO Alimentacao
-            null, //TODO AtividadeFísica
-            null, //TODO DadosBioquimicos
+            atividadesFisicas, 
+            dadosBioquimicos, 
             dadosClinicos, 
             habitos, 
             diagnostico, 
             gastoEnergetico, 
-            null  //TODO CondutaNutricional
+            condutaNutricional  
         );
         
+        //TESTES
         System.out.println(p.getNome());
         System.out.println(p.getDataNasc());
         System.out.println(p.getDiagnostico().getFrituras());
+        System.out.println(p.getDadosBioquimicos().getDadosBioquimicos().get(0).getNome());
             
     }
 

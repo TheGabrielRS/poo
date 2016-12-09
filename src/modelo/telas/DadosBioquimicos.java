@@ -7,6 +7,7 @@ package modelo.telas;
 
 import java.util.ArrayList;
 import java.time.LocalDate;
+import modelo.outros.DadoBioquimico;
 
 /**
  *
@@ -14,31 +15,21 @@ import java.time.LocalDate;
  */
 public class DadosBioquimicos {
     
-    private ArrayList<String> parametro;
-    private ArrayList<LocalDate> data; //TODO método para consistência dos dados entre os arrays
+    private ArrayList<DadoBioquimico> dadosBioquimicos;
 
     public DadosBioquimicos() {
     }
 
-    public DadosBioquimicos(ArrayList<String> parametro, ArrayList<LocalDate> data) {
-        this.parametro = parametro;
-        this.data = data;
+    public DadosBioquimicos(ArrayList<DadoBioquimico> dadosBioquimicos) {
+        this.dadosBioquimicos = dadosBioquimicos;
     }
 
-    public ArrayList<String> getParametro() {
-        return parametro;
+    public ArrayList<DadoBioquimico>  getDadosBioquimicos() {
+        return dadosBioquimicos;
     }
 
-    public void setParametro(ArrayList<String> parametro) {
-        this.parametro = parametro;
-    }
-
-    public ArrayList<LocalDate> getData() {
-        return data;
-    }
-
-    public void setData(ArrayList<LocalDate> data) {
-        this.data = data;
+    public void setDadosBioquimicos(ArrayList<DadoBioquimico>  dadosBioquimicos) {
+        this.dadosBioquimicos = dadosBioquimicos;
     }
     
     
