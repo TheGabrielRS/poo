@@ -1,4 +1,4 @@
-package visao;
+package visao.telasProntuario;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -45,7 +45,7 @@ public class TelaVIIDiagnosticoImpressaoNutricional extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jbTituloSecao.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jbTituloSecao.setText("VIII - Gasto Energético");
+        jbTituloSecao.setText("VII - Diagnóstico / Impressão Nutricional");
 
         jbProximo.setText("Próximo");
 

@@ -1,4 +1,4 @@
-package visao;
+package visao.telasProntuario;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;

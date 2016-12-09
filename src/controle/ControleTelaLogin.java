@@ -6,8 +6,8 @@
 package controle;
 
 import DAO.*;
-import visao.TelaPrincipal;
-import visao.TelaLogin;
+import visao.telasIniciais.TelaPrincipal;
+import visao.telasIniciais.TelaLogin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

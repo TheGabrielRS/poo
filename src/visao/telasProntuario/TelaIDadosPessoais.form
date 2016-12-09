@@ -202,18 +202,20 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="js2" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlIMC" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlBia" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlAltura" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtftPeso" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtftAltura" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtftBia" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtftIMC" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="jlDCS" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jftfDCS" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlIMC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlBia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlAltura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtftPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtftAltura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtftBia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtftIMC" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>

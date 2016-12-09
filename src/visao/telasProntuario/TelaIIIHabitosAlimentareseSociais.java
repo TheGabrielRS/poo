@@ -1,4 +1,4 @@
-package visao;
+package visao.telasProntuario;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;

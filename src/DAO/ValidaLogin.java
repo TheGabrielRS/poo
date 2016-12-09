@@ -8,7 +8,7 @@ package DAO;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import modelo.Usuario;
+import modelo.outros.Usuario;
 
 /**
  *

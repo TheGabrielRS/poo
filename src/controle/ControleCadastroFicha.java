@@ -5,22 +5,25 @@
  */
 package controle;
 
+import modelo.outros.Paciente;
+import modelo.telas.Habitos;
+import modelo.telas.DadosClinicos;
+import modelo.telas.GastoEnergetico;
+import modelo.telas.Diagnostico;
+import visao.telasProntuario.*;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
-import modelo.*;
-import visao.*;
 
 /**
  *
  * @author marcosvlp
  */
 public class ControleCadastroFicha implements ActionListener{
-    public static int NUM_TELAS = 6;
+    public static int NUM_TELAS = 9;
     private JFrame janelaMestre;
     private JFrame jc[];
     private int contTela = 0;
@@ -34,12 +37,12 @@ public class ControleCadastroFicha implements ActionListener{
         jc[0] = new TelaIDadosPessoais();
         jc[1] = new TelaIIDadosClinicos();
         jc[2] = new TelaIIIHabitosAlimentareseSociais();
-        //jc[3] = new TelaIVDadosBioquimicos();
-        //jc[4] = new TelaVAtividadeFisica();
-        //jc[5] = new TelaVIAnamneseAlimentar();
-        jc[3] = new TelaVIIDiagnosticoImpressaoNutricional();
-        jc[4] = new TelaVIIIGastoEnergetico();
-        jc[5] = new TelaIXCondutaNutricional();
+        jc[3] = new TelaIVDadosBioquimicos();
+        jc[4] = new TelaVAtividadeFisica();
+        jc[5] = new TelaVIAnamneseAlimentar();
+        jc[6] = new TelaVIIDiagnosticoImpressaoNutricional();
+        jc[7] = new TelaVIIIGastoEnergetico();
+        jc[8] = new TelaIXCondutaNutricional();
         
         //DEFINE O TAMANHO DA JANELA MESTRE COMO O TAMANHO DO CONTENT PANE DA PRIMEIRA TELA DE PREENCHIMENTO
         janelaMestre.setSize((int)jc[0].getSize().getWidth(), (int)jc[0].getSize().getHeight());
@@ -97,9 +100,8 @@ public class ControleCadastroFicha implements ActionListener{
             }
         });
         
-        //
-        
-        TelaVIIDiagnosticoImpressaoNutricional tmp4 = (TelaVIIDiagnosticoImpressaoNutricional) jc[3];
+        //TELA 4
+        TelaIVDadosBioquimicos tmp4 = (TelaIVDadosBioquimicos) jc[3];
         tmp4.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
                     avancaPagina();
@@ -111,8 +113,9 @@ public class ControleCadastroFicha implements ActionListener{
                     retornaPagina();
             }
         });
-        //
-        TelaVIIIGastoEnergetico tmp5 = (TelaVIIIGastoEnergetico) jc[4];
+        
+        //TELA 5
+        TelaVAtividadeFisica tmp5 = (TelaVAtividadeFisica) jc[4];
         tmp5.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
                     avancaPagina();
@@ -125,15 +128,61 @@ public class ControleCadastroFicha implements ActionListener{
             }
         });
         
-        //
-        TelaIXCondutaNutricional tmp6 = (TelaIXCondutaNutricional) jc[5];
-        tmp6.getJbFinalizar().addActionListener(new java.awt.event.ActionListener(){
+        //TELA 6
+        
+        TelaVIAnamneseAlimentar tmp6 = (TelaVIAnamneseAlimentar) jc[5];
+        tmp6.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    avancaPagina();
+            }
+        });
+        
+        tmp6.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    retornaPagina();
+            }
+        });
+        
+        //TELA 7
+        
+        TelaVIIDiagnosticoImpressaoNutricional tmp7 = (TelaVIIDiagnosticoImpressaoNutricional) jc[6];
+        tmp7.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    avancaPagina();
+            }
+        });
+        
+        tmp7.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    retornaPagina();
+            }
+        });
+        
+        //TELA 8
+        
+        TelaVIIIGastoEnergetico tmp8 = (TelaVIIIGastoEnergetico) jc[7];
+        tmp8.getJbProximo().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    avancaPagina();
+            }
+        });
+        
+        tmp8.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
+                public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                    retornaPagina();
+            }
+        });
+        
+        //TELA 9
+        
+        TelaIXCondutaNutricional tmp9 = (TelaIXCondutaNutricional) jc[8];
+        tmp9.getJbFinalizar().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
                     finalizaCadastro();
             }
         });
         
-        tmp6.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
+        tmp9.getJbAnterior().addActionListener(new java.awt.event.ActionListener(){
                 public void actionPerformed(java.awt.event.ActionEvent evt) {    
                     retornaPagina();
             }
@@ -284,10 +333,6 @@ public class ControleCadastroFicha implements ActionListener{
         /*Alimentacao alimentacao, 
         AtividadeFísica atividadeFísica, 
         DadosBioquimicos dadosBioquimicos, 
-        DadosClinicos dadosClinicos, 
-        Habitos habitos, 
-        Diagnostico diagnostico, 
-        GastoEnergetico gastoEnergetico, 
         CondutaNutricional condutaNutricional*/
         
         Paciente p = new Paciente(
@@ -312,7 +357,7 @@ public class ControleCadastroFicha implements ActionListener{
             null, //TODO AtividadeFísica
             null, //TODO DadosBioquimicos
             dadosClinicos, 
-            habitos, //TODO Habitos
+            habitos, 
             diagnostico, 
             gastoEnergetico, 
             null  //TODO CondutaNutricional

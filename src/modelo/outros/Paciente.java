@@ -3,7 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package modelo.outros;
+import modelo.telas.Habitos;
+import modelo.telas.DadosClinicos;
+import modelo.telas.Alimentacao;
+import modelo.telas.GastoEnergetico;
+import modelo.telas.DadosBioquimicos;
+import modelo.telas.CondutaNutricional;
+import modelo.telas.AtividadeFísica;
+import modelo.telas.Diagnostico;
 import java.time.LocalDate;
 /** 
 *
