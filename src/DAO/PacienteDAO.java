@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 
 /**
  *
@@ -18,8 +19,8 @@ import java.io.BufferedWriter;
  */
 public class PacienteDAO {
     
-    public static final String ARQUIVO = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/pacientes.csv";
-    
+    public static final String URL = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/pacientes.csv";
+    public static final File ARQUIVO = new File(URL);
     
     public static boolean salvaPaciente(Paciente p)
     {
@@ -33,7 +34,7 @@ public class PacienteDAO {
         }
         catch(Exception e)
         {
-            System.out.println(e.getMessage());
+            System.out.println(e.getClass());
             return false;
         }
     }

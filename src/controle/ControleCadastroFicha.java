@@ -20,6 +20,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import visao.telasIniciais.TelaLogin;
+import visao.telasIniciais.TelaPrincipal;
 
 /**
  *
@@ -30,9 +32,11 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
     private JFrame janelaMestre;
     private JFrame jc[];
     private int contTela = 0;
+    private TelaPrincipal tp;
     
-    public ControleCadastroFicha(){
+    public ControleCadastroFicha(TelaPrincipal tp){
         //DEFINE JANELA MESTRE
+        this.tp = tp;
         janelaMestre = new JFrame("Cadastro do Prontuário");
         
         //DEFINE O ARRAY COM AS TELAS DE PREENCHIMENTO
@@ -272,24 +276,24 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         float dcs = -1;
         float dct = -1;
         
-        if(t1.getJtftPeso().getText() == null)
+        if(t1.getJtftPeso().getText() != null)
             peso = Float.valueOf(t1.getJtftPeso().getText());
         
-        if(t1.getJtftAltura().getText() == null)
+        if(t1.getJtftAltura().getText() != null)
             altura = Float.valueOf(t1.getJtftAltura().getText());
-        if(t1.getJtftBia().getText() == null)
+        if(t1.getJtftBia().getText() != null)
             bia = Float.valueOf(t1.getJtftBia().getText());
-        if(t1.getJtftIMC().getText()== null)
+        if(t1.getJtftIMC().getText()!= null)
             imc = Float.valueOf(t1.getJtftIMC().getText());
-        if(t1.getJtftPU().getText()== null)
+        if(t1.getJtftPU().getText()!=null)
             pu = Float.valueOf(t1.getJtftPU().getText());
-        if(t1.getJtftPP().getText()== null)
+        if(t1.getJtftPP().getText()!= null)
             pp = Float.valueOf(t1.getJtftPP().getText());
-        if(t1.getJtftCB().getText()== null)
+        if(t1.getJtftCB().getText()!=null)
             cb = Float.valueOf(t1.getJtftCB().getText());
-        if(t1.getJftfDCS().getText()== null)
+        if(t1.getJftfDCS().getText()!=null)
             dcs = Float.valueOf(t1.getJftfDCS().getText());
-        if(t1.getJtftDCT().getText()== null)
+        if(t1.getJtftDCT().getText()!=null)
             dct  = Float.valueOf(t1.getJtftDCT().getText());
         
         //DADOS CLINICOS
@@ -491,7 +495,8 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         );
         
         boolean retorno = PacienteDAO.salvaPaciente(p);
-        //TESTES
+        this.janelaMestre.dispose();
+        tp.setVisible(true);
 
     }
 

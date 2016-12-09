@@ -88,9 +88,7 @@ public class Paciente {
             tmpAlimentacao += a.getHorario()+ ",";
             tmpAlimentacao += a.getFrequencia()+ ",";
             tmpAlimentacao += a.getTempo();
-            if(this.atividadeFísica.getAtividadesFisicas().get(this.atividadeFísica.getAtividadesFisicas().indexOf(a) + 1) != null){
-                tmpAlimentacao += ",";
-            }
+            tmpAlimentacao += ",";
         }
         
         String tmpDadosBioquimicos = "";
@@ -98,9 +96,7 @@ public class Paciente {
             tmpDadosBioquimicos += db.getNome() + ",";
             tmpDadosBioquimicos += db.getValor() + ",";
             tmpDadosBioquimicos += db.getData() + ",";
-            if(this.dadosBioquimicos.getDadosBioquimicos().get(this.dadosBioquimicos.getDadosBioquimicos().indexOf(db) + 1) != null){
-                tmpDadosBioquimicos += ",";
-            }
+            tmpDadosBioquimicos += ",";
         }
         
         
@@ -205,6 +201,7 @@ public class Paciente {
                this.condutaNutricional.getValorEnergeticoTotal() + "," + 
                this.condutaNutricional.getConduta() + "," +
                this.condutaNutricional.getOrientacoes();
+        
         return csv;
     }
     

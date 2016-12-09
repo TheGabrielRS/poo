@@ -107,7 +107,7 @@ public class ControleTelaLogin implements ActionListener, KeyListener{
     
     private void criarProntuario(){
         tp.dispose();
-        ControleCadastroFicha ccd = new ControleCadastroFicha();
+        ControleCadastroFicha ccd = new ControleCadastroFicha(this.tp);
     }
     
     private void consultarPaciente(){
