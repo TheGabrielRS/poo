@@ -10,18 +10,57 @@ import visao.telasIniciais.TelaPrincipal;
 import visao.telasIniciais.TelaLogin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class ControleTelaLogin implements ActionListener{
+public class ControleTelaLogin implements ActionListener, KeyListener{
     private TelaLogin tl;
     private TelaPrincipal tp;
     
     public ControleTelaLogin(){
         tl = new TelaLogin();
         tp = new TelaPrincipal();
-        this.adicionaActionListeners();
+        
+        this.adicionaListeners();
     }
     
-    private void adicionaActionListeners(){
+    private void adicionaListeners(){
+        //KEY LISTENERS
+        
+        this.tl.getJtfUsuario().addKeyListener(new KeyListener() {
+            public void keyPressed(KeyEvent e) { 
+                if (e.getKeyCode() == KeyEvent.VK_ENTER){
+                    validarCampos();
+                }
+            }
+
+            public void keyTyped(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            public void keyReleased(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
+        
+        this.tl.getJpfSenha().addKeyListener(new KeyListener() {
+            public void keyPressed(KeyEvent e) { 
+                if (e.getKeyCode() == KeyEvent.VK_ENTER){
+                    validarCampos();
+                }
+            }
+
+            public void keyTyped(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            public void keyReleased(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
+        
+        //ACTION LISTENERS
+        
         this.tl.getJbValidar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {    
                 validarCampos();                     
@@ -94,5 +133,20 @@ public class ControleTelaLogin implements ActionListener{
 
     public void actionPerformed(ActionEvent e) {
         
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        System.out.println("bogtao");
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

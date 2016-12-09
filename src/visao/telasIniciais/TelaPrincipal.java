@@ -27,6 +27,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela Principal");
 
         jp1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 

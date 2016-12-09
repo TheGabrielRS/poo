@@ -33,6 +33,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jbValidar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tela de Login");
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.Y_AXIS));
 
         jp1.setBorder(javax.swing.BorderFactory.createEtchedBorder());

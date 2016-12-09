@@ -12,6 +12,8 @@ import visao.telasProntuario.*;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -21,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author marcosvlp
  */
-public class ControleCadastroFicha implements ActionListener{
+public class ControleCadastroFicha implements ActionListener, KeyListener{
     public static int NUM_TELAS = 9;
     private JFrame janelaMestre;
     private JFrame jc[];
@@ -29,7 +31,7 @@ public class ControleCadastroFicha implements ActionListener{
     
     public ControleCadastroFicha(){
         //DEFINE JANELA MESTRE
-        janelaMestre = new JFrame();
+        janelaMestre = new JFrame("Cadastro do Prontuário");
         
         //DEFINE O ARRAY COM AS TELAS DE PREENCHIMENTO
         jc = new JFrame[NUM_TELAS];
@@ -438,5 +440,17 @@ public class ControleCadastroFicha implements ActionListener{
 
 
     public void actionPerformed(ActionEvent e) {
+    }
+
+    public void keyTyped(KeyEvent e) {
+        System.out.println(e.toString());
+    }
+
+    public void keyPressed(KeyEvent e) {
+        System.out.println(e.toString());
+    }
+
+    public void keyReleased(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
