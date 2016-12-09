@@ -55,7 +55,7 @@ public class TelaIXCondutaNutricional extends javax.swing.JFrame {
 
         jlDescricao.setText("Descrição: ");
 
-        jftfVet.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        jftfVet.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0"))));
 
         jtaDescricao.setColumns(20);
         jtaDescricao.setRows(5);

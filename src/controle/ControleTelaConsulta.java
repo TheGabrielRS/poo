@@ -17,15 +17,17 @@ import java.awt.Color;
 import javax.swing.InputVerifier;
 import javax.swing.JComponent;
 import javax.swing.border.LineBorder;
+import visao.telasIniciais.TelaPrincipal;
 /**
  *
  * @author GabrielRS
  */
 public class ControleTelaConsulta implements ActionListener{
-    
+    private TelaPrincipal tp;
     private TelaConsulta tc;
 
-    public ControleTelaConsulta() {
+    public ControleTelaConsulta(TelaPrincipal tp) {
+        this.tp = tp;
         this.tc = new TelaConsulta();
         this.adicionaActionListeners();
         this.adicionaVerificador();
@@ -42,6 +44,13 @@ public class ControleTelaConsulta implements ActionListener{
             }
         });
         
+        this.tc.getJbVoltar().addActionListener(new java.awt.event.ActionListener(){
+            public void actionPerformed(java.awt.event.ActionEvent evt) {    
+                tc.dispose();
+                tp.setVisible(true);
+            }
+        });
+        
     }
     
     public void adicionaVerificador()
@@ -49,7 +58,6 @@ public class ControleTelaConsulta implements ActionListener{
         this.tc.getCpfTxt().setInputVerifier(new InputVerifier() {
             @Override
             public boolean verify(JComponent input) {
-                
                 if(Validacao.isValidCPF(tc.getCpfTxt().getText()))
                 {
                     tc.getCpfTxt().setBorder(new LineBorder(Color.GREEN));
@@ -59,6 +67,7 @@ public class ControleTelaConsulta implements ActionListener{
                 }
                 else
                 {
+
                     tc.getMsgCpfLbl().setText("CPF inválido (use somente números)");
                     tc.getCpfTxt().setBorder(new LineBorder(Color.RED));
                     tc.getMsgCpfLbl().setForeground(Color.RED);
@@ -75,7 +84,7 @@ public class ControleTelaConsulta implements ActionListener{
         if(pac != null)
             this.tc.getResultadoTxtArea().setText(pac.toConsulta());
         else{
-            System.out.println("nulooo");
+            this.tc.getResultadoTxtArea().setText("CPF não encontrado");
         }
     }
     

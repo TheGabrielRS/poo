@@ -399,8 +399,19 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         );
         
         //Alimentacao
+        TelaVIAnamneseAlimentar t5 = (TelaVIAnamneseAlimentar) jc[5];
         
-        
+        Alimentacao alimentacao = new Alimentacao(
+            new Refeicao(t5.getJtaDesjejum().getText(), t5.getJtfHorarioDesjejum().getText()),
+            new Refeicao(t5.getJtaLanche().getText(), t5.getJtfHorarioLanche().getText()),
+            new Refeicao(t5.getJtaColacao().getText(), t5.getJtfHorarioColacao().getText()),
+            new Refeicao(t5.getJtaJantar().getText(), t5.getJtfHorarioJantar().getText()),
+            new Refeicao(t5.getJtaAlmoco().getText(), t5.getJtfHorarioAlmoco().getText()),
+            new Refeicao(t5.getJtaCeia().getText(), t5.getJtfHorarioCeia().getText()),
+            t5.getJtfObs().getText(), 
+            t5.getJtfGosta().getText(), 
+            t5.getJtfNaoGosta().getText()
+        );
         
         Paciente p = new Paciente(
             cpf, 
@@ -420,7 +431,7 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
             cb, 
             dcs, 
             dct, 
-            null, //TODO Alimentacao
+            alimentacao, 
             atividadesFisicas, 
             dadosBioquimicos, 
             dadosClinicos, 
@@ -434,8 +445,7 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         System.out.println(p.getNome());
         System.out.println(p.getDataNasc());
         System.out.println(p.getDiagnostico().getFrituras());
-        System.out.println(p.getDadosBioquimicos().getDadosBioquimicos().get(0).getNome());
-            
+        System.out.println(p.getDadosBioquimicos().getDadosBioquimicos().get(0).getNome()); 
     }
 
 

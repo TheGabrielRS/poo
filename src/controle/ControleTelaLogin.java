@@ -111,8 +111,8 @@ public class ControleTelaLogin implements ActionListener, KeyListener{
     }
     
     private void consultarPaciente(){
-        tp.dispose();
-        ControleTelaConsulta ctc = new ControleTelaConsulta();
+        tp.setVisible(false);
+        ControleTelaConsulta ctc = new ControleTelaConsulta(tp);
     }
     
     public TelaLogin getTl() {

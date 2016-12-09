@@ -169,6 +169,7 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
 
         bgConsistenciaAlimentacao.add(jrbNao);
         jrbNao.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbNao.setSelected(true);
         jrbNao.setText("Não");
 
         bgApetite.add(jrbAbaixoNormal);
@@ -184,6 +185,7 @@ public class TelaIIDadosClinicos extends javax.swing.JFrame {
 
         bgApetite.add(jrbNormal);
         jrbNormal.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jrbNormal.setSelected(true);
         jrbNormal.setText("Normal");
         jrbNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

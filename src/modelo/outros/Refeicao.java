@@ -14,12 +14,12 @@ import java.time.LocalTime;
 public class Refeicao {
     
     private String descricao;
-    private LocalTime horario;
+    private String horario;
 
     public Refeicao() {
     }
 
-    public Refeicao(String descricao, LocalTime horario) {
+    public Refeicao(String descricao, String horario) {
         this.descricao = descricao;
         this.horario = horario;
     }
@@ -32,11 +32,11 @@ public class Refeicao {
         this.descricao = descricao;
     }
 
-    public LocalTime getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(LocalTime horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
     
