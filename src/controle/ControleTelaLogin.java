@@ -43,7 +43,7 @@ public class ControleTelaLogin implements ActionListener{
         
         this.tp.getJbConsultar().addActionListener(new java.awt.event.ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //criarProntuario();
+                consultarPaciente();
             }
         });
     }
@@ -70,6 +70,11 @@ public class ControleTelaLogin implements ActionListener{
     private void criarProntuario(){
         tp.dispose();
         ControleCadastroFicha ccd = new ControleCadastroFicha();
+    }
+    
+    private void consultarPaciente(){
+        tp.dispose();
+        ControleTelaConsulta ctc = new ControleTelaConsulta();
     }
     
     public TelaLogin getTl() {
