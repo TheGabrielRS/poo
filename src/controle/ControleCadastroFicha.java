@@ -18,6 +18,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -207,8 +208,12 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         
         TelaIXCondutaNutricional tmp9 = (TelaIXCondutaNutricional) jc[8];
         tmp9.getJbFinalizar().addActionListener(new java.awt.event.ActionListener(){
-                public void actionPerformed(java.awt.event.ActionEvent evt) {    
-                    finalizaCadastro();
+                public void actionPerformed(java.awt.event.ActionEvent evt) {  
+                    try{
+                        finalizaCadastro();
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(null, "Algum dado inserido incorretamente", "Erro", JOptionPane.ERROR_MESSAGE);
+                    }
             }
         });
         
@@ -257,15 +262,35 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         String profissao = t1.getJtfProfissao().getText();
         String trabalho = t1.getJtfLocalTrabalho().getText();
         String turnoTrabalho = t1.getJtfHorarioTrabalho().getText();
-        float peso = Float.valueOf(t1.getJtftPeso().getText());
-        float altura = Float.valueOf(t1.getJtftPeso().getText());
-        float bia = Float.valueOf(t1.getJtftBia().getText());
-        float imc = Float.valueOf(t1.getJtftIMC().getText());
-        float pu = Float.valueOf(t1.getJtftPU().getText());
-        float pp = Float.valueOf(t1.getJtftPP().getText());
-        float cb = Float.valueOf(t1.getJtftCB().getText());
-        float dcs = Float.valueOf(t1.getJftfDCS().getText());
-        float dct = Float.valueOf(t1.getJtftDCT().getText()); 
+        float peso = -1;
+        float altura = -1;
+        float bia = -1;
+        float imc = -1;
+        float pu = -1;
+        float pp = -1;
+        float cb = -1;
+        float dcs = -1;
+        float dct = -1;
+        
+        if(t1.getJtftPeso().getText() == null)
+            peso = Float.valueOf(t1.getJtftPeso().getText());
+        
+        if(t1.getJtftAltura().getText() == null)
+            altura = Float.valueOf(t1.getJtftAltura().getText());
+        if(t1.getJtftBia().getText() == null)
+            bia = Float.valueOf(t1.getJtftBia().getText());
+        if(t1.getJtftIMC().getText()== null)
+            imc = Float.valueOf(t1.getJtftIMC().getText());
+        if(t1.getJtftPU().getText()== null)
+            pu = Float.valueOf(t1.getJtftPU().getText());
+        if(t1.getJtftPP().getText()== null)
+            pp = Float.valueOf(t1.getJtftPP().getText());
+        if(t1.getJtftCB().getText()== null)
+            cb = Float.valueOf(t1.getJtftCB().getText());
+        if(t1.getJftfDCS().getText()== null)
+            dcs = Float.valueOf(t1.getJftfDCS().getText());
+        if(t1.getJtftDCT().getText()== null)
+            dct  = Float.valueOf(t1.getJtftDCT().getText());
         
         //DADOS CLINICOS
         
@@ -329,14 +354,22 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         if(t3.getBgFumante().getSelection().equals(t3.getJrbExFumante()))
             exFumante = true;
         
+        int qtdAgua = -1;
+        if(t3.getJtfAgua().getText() == null)
+            qtdAgua = Integer.parseInt(t3.getJtfAgua().getText());
+        
+        int anosCigarro = -1;
+        if(t3.getJtfAnosCigarros().getText() == null)
+            anosCigarro = Integer.parseInt(t3.getJtfAnosCigarros().getText());
+        
         Habitos habitos = new Habitos(
             t3.getJtfAlergia().getText(), 
-            Integer.parseInt(t3.getJtfAgua().getText()), 
+            qtdAgua, 
             etilismo, 
             t3.getJtfElitismo().getText(), 
             fumante, 
             exFumante, 
-            Integer.parseInt(t3.getJtfAnosCigarros().getText()),
+            anosCigarro,
             t3.getJtfSono().getText()
         );
         
@@ -356,9 +389,19 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         
         TelaVIIIGastoEnergetico t8 = (TelaVIIIGastoEnergetico) jc[7];
         
+        
+        float geb = -1;
+        float get = -1;
+        
+        if(t8.getJftfGEB().getText() == null)
+            geb = Float.valueOf(t8.getJftfGEB().getText());
+        
+        if(t8.getJftfGET().getText() == null)
+            get = Float.valueOf(t8.getJftfGET().getText());
+        
         GastoEnergetico gastoEnergetico = new GastoEnergetico (
-            Float.valueOf(t8.getJftfGEB().getText()),
-            Float.valueOf(t8.getJftfGET().getText())
+            geb,
+            get
         );
         
         //Dados Bioquimicos
@@ -394,9 +437,13 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         //Conduta Nutricional
         TelaIXCondutaNutricional t9 = (TelaIXCondutaNutricional) jc[8];
         
+        float vet = -1;
+        if(t9.getJftfVet().getText() == null)
+            vet = Float.valueOf(t9.getJftfVet().getText());
+        
         CondutaNutricional condutaNutricional = new CondutaNutricional(
             t9.getJtaDescricao().getText(),
-            Float.valueOf(t9.getJftfVet().getText()), 
+            vet,
             t9.getJtaOrientacoes().getText()
         );
         

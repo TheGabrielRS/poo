@@ -59,6 +59,7 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
         jrbSimEtilismo.setText("Sim");
 
         bgEtilismo.add(jrbNaoEtilismo);
+        jrbNaoEtilismo.setSelected(true);
         jrbNaoEtilismo.setText("Não");
 
         jlFumante.setText("Fumante");
@@ -67,6 +68,7 @@ public class TelaIIIHabitosAlimentareseSociais extends javax.swing.JFrame {
         jrbSimFumante.setText("Sim");
 
         bgFumante.add(jrbNaoFumante);
+        jrbNaoFumante.setSelected(true);
         jrbNaoFumante.setText("Não");
 
         bgFumante.add(jrbExFumante);

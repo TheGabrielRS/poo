@@ -66,6 +66,12 @@ public class TelaIDadosPessoais extends javax.swing.JFrame {
 
         jlNome.setText("Nome: ");
 
+        jtfNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNomeActionPerformed(evt);
+            }
+        });
+
         jlProfissao.setText("Profissão: ");
 
         jtfProfissao.addActionListener(new java.awt.event.ActionListener() {
@@ -366,6 +372,10 @@ public class TelaIDadosPessoais extends javax.swing.JFrame {
     private void jtftPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtftPesoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtftPesoActionPerformed
+
+    private void jtfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNomeActionPerformed
 
     public JButton getJbAnterior() {
         return jbAnterior;
