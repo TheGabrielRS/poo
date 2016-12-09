@@ -30,6 +30,7 @@ public class PacienteDAO {
             System.out.println(p.toCSV());
             writer.write(p.toCSV());
             writer.newLine();
+            writer.close();
             return true;
         }
         catch(Exception e)

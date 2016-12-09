@@ -101,8 +101,7 @@ public class Paciente {
         
         
         String csv ="";
-        csv += "dados pessoais,"+
-               this.cpf + "," + 
+        csv += this.cpf + "," + 
                this.nome + "," + 
                this.sexo + "," + 
                this.dataNasc + "," + 
