@@ -18,11 +18,12 @@ public class Habitos {
     private boolean fumante;
     private boolean exFumante;
     private int     anosCigarros; //TODO método para popular corretamente conforme resposta anterior
-
+    private String descSono;
+    
     public Habitos() {
     }
 
-    public Habitos(String alergia, int qtdAgua, boolean etilismo, String descEtilismo, boolean fumante, boolean exFumante, int anosCigarros) {
+    public Habitos(String alergia, int qtdAgua, boolean etilismo, String descEtilismo, boolean fumante, boolean exFumante, int anosCigarros, String descSono) {
         this.alergia = alergia;
         this.qtdAgua = qtdAgua;
         this.etilismo = etilismo;
@@ -30,6 +31,7 @@ public class Habitos {
         this.fumante = fumante;
         this.exFumante = exFumante;
         this.anosCigarros = anosCigarros;
+        this.descSono = descSono;
     }
     
     public String getAlergia() {
@@ -86,6 +88,14 @@ public class Habitos {
 
     public void setAnosCigarros(int anosCigarros) {
         this.anosCigarros = anosCigarros;
+    }
+
+    public String getDescSono() {
+        return descSono;
+    }
+
+    public void setDescSono(String descSono) {
+        this.descSono = descSono;
     }
     
     

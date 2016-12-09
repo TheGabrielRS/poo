@@ -5,6 +5,7 @@
  */
 package controle;
 
+import DAO.PacienteDAO;
 import modelo.outros.*;
 import modelo.telas.*;
 import visao.telasProntuario.*;
@@ -335,7 +336,8 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
             t3.getJtfElitismo().getText(), 
             fumante, 
             exFumante, 
-            Integer.parseInt(t3.getJtfAnosCigarros().getText())
+            Integer.parseInt(t3.getJtfAnosCigarros().getText()),
+            t3.getJtfSono().getText()
         );
         
         //DIAGNOSTICO IMPRESSAO NUTRICIONAL
@@ -376,7 +378,7 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
         //Atividades Fisicas
         
         ArrayList<AtividadeFisica> arrayAtividadesFisicas = new  ArrayList<AtividadeFisica>();
-        model = (DefaultTableModel)  ((TelaIVDadosBioquimicos) jc[4]).getJtDados().getModel();
+        model = (DefaultTableModel)  ((TelaVAtividadeFisica) jc[4]).getJtDados().getModel();
         for(int x = 0; x < model.getRowCount(); x++){
             AtividadeFisica af = new AtividadeFisica();
             af.setTipo((String)model.getValueAt(x,0)); 
@@ -441,11 +443,9 @@ public class ControleCadastroFicha implements ActionListener, KeyListener{
             condutaNutricional  
         );
         
+        boolean retorno = PacienteDAO.salvaPaciente(p);
         //TESTES
-        System.out.println(p.getNome());
-        System.out.println(p.getDataNasc());
-        System.out.println(p.getDiagnostico().getFrituras());
-        System.out.println(p.getDadosBioquimicos().getDadosBioquimicos().get(0).getNome()); 
+
     }
 
 

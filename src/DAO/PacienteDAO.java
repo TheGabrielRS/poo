@@ -21,11 +21,12 @@ public class PacienteDAO {
     public static final String ARQUIVO = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/pacientes.csv";
     
     
-    public boolean salvaPaciente(Paciente p)
+    public static boolean salvaPaciente(Paciente p)
     {
         try{
             FileWriter pacientes = new FileWriter(ARQUIVO,true);
             BufferedWriter writer = new BufferedWriter(pacientes);
+            System.out.println(p.toCSV());
             writer.write(p.toCSV());
             writer.newLine();
             return true;

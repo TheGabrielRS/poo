@@ -39,7 +39,7 @@ public class Paciente {
     
     //Demais informações
     private Alimentacao         alimentacao;
-    private AtividadesFisicas     atividadeFísica;
+    private AtividadesFisicas   atividadeFísica;
     private DadosBioquimicos    dadosBioquimicos;
     private DadosClinicos       dadosClinicos;
     private Habitos             habitos;
@@ -82,7 +82,129 @@ public class Paciente {
     
     public String toCSV()
     {
+        String tmpAlimentacao = "";
+        for(AtividadeFisica a: this.atividadeFísica.getAtividadesFisicas()){
+            tmpAlimentacao += a.getTipo() + ",";
+            tmpAlimentacao += a.getHorario()+ ",";
+            tmpAlimentacao += a.getFrequencia()+ ",";
+            tmpAlimentacao += a.getTempo();
+            if(this.atividadeFísica.getAtividadesFisicas().get(this.atividadeFísica.getAtividadesFisicas().indexOf(a) + 1) != null){
+                tmpAlimentacao += ",";
+            }
+        }
+        
+        String tmpDadosBioquimicos = "";
+        for(DadoBioquimico db: this.dadosBioquimicos.getDadosBioquimicos()){
+            tmpDadosBioquimicos += db.getNome() + ",";
+            tmpDadosBioquimicos += db.getValor() + ",";
+            tmpDadosBioquimicos += db.getData() + ",";
+            if(this.dadosBioquimicos.getDadosBioquimicos().get(this.dadosBioquimicos.getDadosBioquimicos().indexOf(db) + 1) != null){
+                tmpDadosBioquimicos += ",";
+            }
+        }
+        
+        
         String csv ="";
+        csv += "dados pessoais,"+
+               this.cpf + "," + 
+               this.nome + "," + 
+               this.sexo + "," + 
+               this.dataNasc + "," + 
+               this.naturalidade + "," + 
+               this.profissao + "," + 
+               this.trabalho + "," + 
+               this.turnoTrabalho + "," + 
+               this.peso + "," + 
+               this.altura + "," + 
+               this.bia + "," + 
+               this.imc + "," + 
+               this.pu + "," + 
+               this.pp + "," + 
+               this.cb + "," + 
+               this.dcs + "," + 
+               this.dct + "," + 
+                
+               //ALIMENTACAO
+               "alimentação,"+
+               this.alimentacao.getDesjejum().getDescricao() + "," + 
+               this.alimentacao.getDesjejum().getHorario() + "," + 
+                
+               this.alimentacao.getLanche().getDescricao() + "," +
+               this.alimentacao.getLanche().getHorario() + "," + 
+                
+               this.alimentacao.getColacao().getDescricao() + "," + 
+               this.alimentacao.getColacao().getHorario() + "," + 
+
+               this.alimentacao.getJantar().getDescricao() + "," + 
+               this.alimentacao.getJantar().getHorario() + "," + 
+
+               this.alimentacao.getAlmoco().getDescricao() + "," + 
+               this.alimentacao.getAlmoco().getHorario() + "," + 
+
+               this.alimentacao.getCeia().getDescricao() + "," + 
+               this.alimentacao.getCeia().getHorario() + "," + 
+                
+               this.alimentacao.getObservacoes() + "," + 
+               this.alimentacao.getGosta() + "," + 
+               this.alimentacao.getNaoGosta() + "," + 
+                
+               //Atividades físicas
+               "atividades físicas,"+
+               tmpAlimentacao + "," +
+                
+               //Dados Bioquimicos
+               "dados bioquimicos," + 
+               tmpDadosBioquimicos + "," +
+                
+               //Dados Clínicos
+               "dados clínicos," + 
+               this.dadosClinicos.getHistoria() + "," +
+               this.dadosClinicos.getInterferencia() + "," +
+               this.dadosClinicos.getAtitudes() + "," +
+               this.dadosClinicos.getPatologias() +
+               ",alteracões gastro," + 
+               this.dadosClinicos.getAlteracoesGastrointestinais().toString() +
+               ",obs," + 
+               this.dadosClinicos.getGastroObs() + 
+               ",mudanças consistência," +
+               this.dadosClinicos.isConsistencia() + "," +
+               this.dadosClinicos.getMotivoConsistencia() + "," +
+               ",apetite," + 
+               this.dadosClinicos.getApetite() + "," +
+               this.dadosClinicos.getApetiteRazao() + "," +
+                
+               //Hábitos
+               "hábitos," + 
+               this.habitos.getAlergia() + "," +
+               this.habitos.getQtdAgua() + "," +
+               this.habitos.isEtilismo() + "," +
+               this.habitos.getDescEtilismo() + "," +
+               this.habitos.isFumante() + "," +
+               this.habitos.isExFumante() + "," +
+               this.habitos.getAnosCigarros() + "," +
+               this.habitos.getDescSono() + "," + 
+                
+               //Diagnóstico
+               "diagnostico," + 
+               this.diagnostico.getDiagnostico() + "," +
+               this.diagnostico.getVerduras() + "," +
+               this.diagnostico.getFrutas() + "," +
+               this.diagnostico.getRefrigerante() + "," +
+               this.diagnostico.getDoces() + "," +
+               this.diagnostico.getPaes() + "," +
+               this.diagnostico.getFrituras() + "," +
+               this.diagnostico.getFastFood() + "," +
+                
+               //Gasto energético
+               "gasto energético," +
+               this.gastoEnergetico.getGeb() + "," +
+               this.gastoEnergetico.getGet() + "," +
+                
+               //Conduta Nutricional
+               "conduta nutricional,"+
+               this.condutaNutricional.getValorEnergeticoTotal() + "," + 
+               this.condutaNutricional.getConduta() + "," +
+               this.condutaNutricional.getOrientacoes();
         return csv;
     }
     
