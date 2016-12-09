@@ -6,6 +6,7 @@
 package visao.telasIniciais;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -41,6 +42,7 @@ public class TelaConsulta extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         cpfTxt = new javax.swing.JTextField();
         buscarBtn = new javax.swing.JButton();
+        msgCpfLbl = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         resultadoTxtArea = new javax.swing.JTextArea();
@@ -87,7 +89,9 @@ public class TelaConsulta extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(cpfTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(msgCpfLbl)
+                            .addComponent(cpfTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -97,7 +101,9 @@ public class TelaConsulta extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cpfTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(msgCpfLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(buscarBtn)
                 .addContainerGap())
         );
@@ -120,7 +126,7 @@ public class TelaConsulta extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,6 +172,7 @@ public class TelaConsulta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel msgCpfLbl;
     private javax.swing.JTextArea resultadoTxtArea;
     // End of variables declaration//GEN-END:variables
 
@@ -180,7 +187,10 @@ public class TelaConsulta extends javax.swing.JFrame {
     public JTextArea getResultadoTxtArea() {
         return resultadoTxtArea;
     }
-    
+
+    public JLabel getMsgCpfLbl() {
+        return msgCpfLbl;
+    }   
     
     
 

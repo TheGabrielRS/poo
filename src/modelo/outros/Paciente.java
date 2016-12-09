@@ -19,7 +19,7 @@ import modelo.telas.Diagnostico;
 public class Paciente {
     
     //Dados pessoais
-    private String cpf; //TODO valida CPF
+    private String cpf;
     private String nome;
     private char sexo;
     private String dataNasc; //TODO método para calcular idade
@@ -47,6 +47,10 @@ public class Paciente {
     private GastoEnergetico     gastoEnergetico;
     private CondutaNutricional  condutaNutricional;
 
+    public Paciente() {
+    }
+    
+    
     public Paciente(String cpf, String nome, char sexo, String dataNasc, String naturalidade, String profissao, String trabalho, String turnoTrabalho, float peso, float altura, float bia, float imc, float pu, float pp, float cb, float dcs, float dct, Alimentacao alimentacao, AtividadesFisicas atividadeFísica, DadosBioquimicos dadosBioquimicos, DadosClinicos dadosClinicos, Habitos habitos, Diagnostico diagnostico, GastoEnergetico gastoEnergetico, CondutaNutricional condutaNutricional) {
         this.cpf = cpf;
         this.nome = nome;
@@ -84,7 +88,7 @@ public class Paciente {
     
     public String toConsulta()
     {
-        String consulta = "";
+        String consulta = "CPF: "+cpf+"\n Nome: "+nome+"\n Sexo: "+sexo+"\n Data de nascimento: "+dataNasc+"\n Naturalidade: "+naturalidade+"\n Profissão: "+profissao+"\n Turno de trabalho: "+turnoTrabalho;
         return consulta;
     }
 

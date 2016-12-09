@@ -12,9 +12,11 @@ import visao.telasIniciais.TelaConsulta;
 import modelo.Validacao;
 import modelo.outros.Paciente;
 import DAO.PacienteDAO;
+import java.awt.Color;
 
 import javax.swing.InputVerifier;
 import javax.swing.JComponent;
+import javax.swing.border.LineBorder;
 /**
  *
  * @author GabrielRS
@@ -27,6 +29,9 @@ public class ControleTelaConsulta implements ActionListener{
         this.tc = new TelaConsulta();
         this.adicionaActionListeners();
         this.adicionaVerificador();
+        this.tc.setLocationRelativeTo(null);
+        this.tc.setVisible(true);
+        this.tc.getCpfTxt().requestFocus();
     }
     
     public void adicionaActionListeners()
@@ -44,7 +49,21 @@ public class ControleTelaConsulta implements ActionListener{
         this.tc.getCpfTxt().setInputVerifier(new InputVerifier() {
             @Override
             public boolean verify(JComponent input) {
-                return Validacao.isValidCPF(tc.getCpfTxt().getText());
+                
+                if(Validacao.isValidCPF(tc.getCpfTxt().getText()))
+                {
+                    tc.getCpfTxt().setBorder(new LineBorder(Color.GREEN));
+                    tc.getMsgCpfLbl().setText("CPF válido");
+                    tc.getMsgCpfLbl().setForeground(Color.GREEN);
+                    return true;
+                }
+                else
+                {
+                    tc.getMsgCpfLbl().setText("CPF inválido (use somente números)");
+                    tc.getCpfTxt().setBorder(new LineBorder(Color.RED));
+                    tc.getMsgCpfLbl().setForeground(Color.RED);
+                    return false;
+                }
             }
         });
     }
@@ -55,6 +74,9 @@ public class ControleTelaConsulta implements ActionListener{
         Paciente pac = p.buscaPaciente(this.tc.getCpfTxt().getText());
         if(pac != null)
             this.tc.getResultadoTxtArea().setText(pac.toConsulta());
+        else{
+            System.out.println("nulooo");
+        }
     }
     
     
