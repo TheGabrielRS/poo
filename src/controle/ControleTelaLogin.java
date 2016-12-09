@@ -5,12 +5,11 @@
  */
 package controle;
 
-import DAO.*;
+import DAO.ValidaLogin;
 import visao.telasIniciais.TelaPrincipal;
 import visao.telasIniciais.TelaLogin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
 
 public class ControleTelaLogin implements ActionListener{
     private TelaLogin tl;

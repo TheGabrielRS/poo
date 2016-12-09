@@ -12,7 +12,6 @@ import modelo.telas.DadosBioquimicos;
 import modelo.telas.CondutaNutricional;
 import modelo.telas.AtividadesFisicas;
 import modelo.telas.Diagnostico;
-import java.time.LocalDate;
 /** 
 *
  * @author GabrielRS
@@ -77,6 +76,25 @@ public class Paciente {
     }
 
     
+    public String toCSV()
+    {
+        String csv ="";
+        return csv;
+    }
+    
+    public String toConsulta()
+    {
+        String consulta = "";
+        return consulta;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
     
     public String getNome() {
         return nome;

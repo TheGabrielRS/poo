@@ -8,9 +8,9 @@ package controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import visao.TelaConsulta;
+import visao.telasIniciais.TelaConsulta;
 import modelo.Validacao;
-import modelo.Paciente;
+import modelo.outros.Paciente;
 import DAO.PacienteDAO;
 
 import javax.swing.InputVerifier;

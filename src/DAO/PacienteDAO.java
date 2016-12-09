@@ -6,14 +6,11 @@
 package DAO;
 
 import java.net.URL;
-import modelo.Paciente;
+import modelo.outros.Paciente;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 /**
  *
@@ -22,7 +19,6 @@ import java.util.Locale;
 public class PacienteDAO {
     
     public static final String ARQUIVO = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/paciente.csv";
-    private DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-mm-yyyy");
     
     
     public boolean salvaPaciente(Paciente p)
