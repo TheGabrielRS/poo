@@ -19,23 +19,27 @@ import java.io.File;
  */
 public class PacienteDAO {
     
-    public static final String URL = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/pacientes.csv";
+    public static final String URL = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"DAO/pacientes.csv";
     public static final File ARQUIVO = new File(URL);
     
     public static boolean salvaPaciente(Paciente p)
     {
         try{
-            FileWriter pacientes = new FileWriter(ARQUIVO,true);
+            FileWriter pacientes = new FileWriter("pacientes.csv",true);
+//            FileWriter pacientes = new FileWriter(ARQUIVO,true);
             BufferedWriter writer = new BufferedWriter(pacientes);
             System.out.println(p.toCSV());
             writer.write(p.toCSV());
             writer.newLine();
+            writer.flush();
             writer.close();
             return true;
         }
         catch(Exception e)
         {
-            System.out.println(e.getClass());
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println("dando exceção");
             return false;
         }
     }
@@ -43,7 +47,7 @@ public class PacienteDAO {
     public Paciente buscaPaciente(String filtro)
     {
         try{
-            FileReader arqPacientes = new FileReader(ARQUIVO);
+            FileReader arqPacientes = new FileReader("pacientes.csv");
             BufferedReader leitorPacientes = new BufferedReader(arqPacientes);
             String linha = null;
             String[] splitLinha = null;
