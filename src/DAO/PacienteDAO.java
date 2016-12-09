@@ -18,7 +18,7 @@ import java.io.BufferedWriter;
  */
 public class PacienteDAO {
     
-    public static final String ARQUIVO = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/paciente.csv";
+    public static final String ARQUIVO = ValidaLogin.class.getProtectionDomain().getCodeSource().getLocation().getFile()+"/DAO/pacientes.csv";
     
     
     public boolean salvaPaciente(Paciente p)
@@ -47,8 +47,10 @@ public class PacienteDAO {
             Paciente paciente = null;
             while((linha = leitorPacientes.readLine()) != null){
                 splitLinha = linha.split(",");
+                System.out.println("filtro: "+filtro);
                 if(filtro.equals(splitLinha[0]))
                 {
+                    paciente = new Paciente();
                     paciente.setCpf(splitLinha[0]);
                     paciente.setNome(splitLinha[1]);
                     paciente.setSexo(splitLinha[2].charAt(0));
@@ -56,6 +58,7 @@ public class PacienteDAO {
                     paciente.setNaturalidade(splitLinha[4]);
                     paciente.setProfissao(splitLinha[5]);
                     paciente.setTrabalho(splitLinha[6]);
+                    paciente.setTurnoTrabalho(splitLinha[7]);
                     return paciente;
                 }
             }            
